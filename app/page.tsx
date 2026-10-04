@@ -13,16 +13,22 @@ const countByPillar: Record<string, number> = {
   ai: aiServices.length,
 };
 
-const before = [
-  "Invoices submitted by hand, one at a time",
-  "Finance, sales, and operations each on a different system",
-  "Nobody fully sure the numbers actually match",
-];
-
-const after = [
-  "Invoices go out compliant, automatically",
-  "One connected system across the business",
-  "Reports that agree with each other",
+const businessProblems = [
+  {
+    title: "Fragmented systems",
+    problem: "Different departments and applications don't talk to each other.",
+    solution: "We connect them.",
+  },
+  {
+    title: "E-invoicing complexity",
+    problem: "ERP invoices must comply with changing tax-authority requirements.",
+    solution: "We automate the compliance.",
+  },
+  {
+    title: "Manual processes",
+    problem: "Your team spends hours moving data between systems by hand.",
+    solution: "We automate the workflow.",
+  },
 ];
 
 export default function Home() {
@@ -41,10 +47,10 @@ export default function Home() {
               Keep your ERP connected, compliant, and running smoothly.
             </h1>
             <p className="mt-6 max-w-md text-muted">
-              We set up and connect SAP, Sage, Microsoft Dynamics 365,
-              Oracle, and ERPNext — then layer on the e-invoicing compliance
-              and AI automation that keeps your team from doing things by
-              hand.
+              With 25+ years of ERP implementation experience — and 5+ years
+              building e-invoicing integrations and AI automation — we set
+              up and connect ERPNext, SAP, Sage, Microsoft Dynamics 365, and
+              Oracle, then keep you compliant and automate the busywork.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Button href="/contact/">Start a project</Button>
@@ -55,34 +61,21 @@ export default function Home() {
           </div>
 
           <div className="rounded-xl border border-border bg-background p-6 shadow-sm">
-            <div className="grid grid-cols-2 gap-6">
-              <div>
-                <p className="font-mono-label text-xs uppercase text-muted">
-                  Before
-                </p>
-                <ul className="mt-3 space-y-3">
-                  {before.map((item) => (
-                    <li key={item} className="text-sm text-muted">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="border-l border-border pl-6">
-                <p className="font-mono-label text-xs uppercase text-brand">
-                  After
-                </p>
-                <ul className="mt-3 space-y-3">
-                  {after.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-foreground">
-                      <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-light text-brand">
-                        <CheckIcon className="h-3 w-3" />
-                      </span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="divide-y divide-border">
+              {businessProblems.map((p) => (
+                <div key={p.title} className="py-4 first:pt-0 last:pb-0">
+                  <p className="font-mono-label text-xs uppercase text-muted">
+                    {p.title}
+                  </p>
+                  <p className="mt-2 text-sm text-muted">{p.problem}</p>
+                  <p className="mt-2 flex items-center gap-2 text-sm font-medium text-brand">
+                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-light text-brand">
+                      <CheckIcon className="h-3 w-3" />
+                    </span>
+                    {p.solution}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

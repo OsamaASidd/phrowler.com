@@ -38,29 +38,19 @@ export default function ContactPage() {
               </a>
             </div>
             <div>
-              <div className="font-medium text-foreground">Location</div>
-              <div className="text-muted">{site.location}</div>
+              <div className="font-medium text-foreground">WhatsApp</div>
+              <a
+                href={site.links.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-brand transition-colors"
+              >
+                {site.whatsapp}
+              </a>
             </div>
             <div>
-              <div className="font-medium text-foreground">Elsewhere</div>
-              <div className="flex gap-4">
-                <a
-                  href={site.links.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-brand transition-colors"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href={site.links.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-brand transition-colors"
-                >
-                  GitHub
-                </a>
-              </div>
+              <div className="font-medium text-foreground">Location</div>
+              <div className="text-muted">{site.location}</div>
             </div>
           </div>
         </div>

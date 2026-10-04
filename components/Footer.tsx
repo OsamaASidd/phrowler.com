@@ -33,20 +33,12 @@ export default function Footer() {
             {site.email}
           </a>
           <a
-            href={site.links.linkedin}
+            href={site.links.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted hover:text-brand transition-colors"
           >
-            LinkedIn
-          </a>
-          <a
-            href={site.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted hover:text-brand transition-colors"
-          >
-            GitHub
+            WhatsApp
           </a>
         </div>
       </Container>
@@ -59,6 +51,7 @@ export default function Footer() {
           {site.legal.registrationNumber}, License No. {site.legal.licenseNumber},{" "}
           {site.legal.jurisdiction}.
         </p>
+        <p className="mt-1 text-xs text-muted">{site.legal.address}</p>
       </Container>
     </footer>
   );

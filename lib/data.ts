@@ -2,38 +2,38 @@ import type { IconKey } from "@/components/icons";
 
 export const site = {
   name: "Phrowler",
-  tagline: "ERP Implementation, Integration & AI",
+  tagline: "25+ Years of ERP Expertise. Modern ERPNext & AI Solutions.",
   description:
-    "Phrowler helps businesses set up and connect their ERP systems, stay compliant with e-invoicing rules, and automate the busywork with AI that actually works in production.",
-  email: "osama.siddiqui2017@gmail.com",
-  phone: "+92 345 9992922",
-  location: "Karachi, Pakistan",
+    "Phrowler brings 25+ years of ERP implementation and system design experience, plus 5+ years in e-invoicing integration and AI automation — helping businesses implement ERPNext, stay compliant, and automate the busywork.",
+  email: "info@phrowler.com",
+  whatsapp: "+968 7120 7881",
+  location: "Muscat, Oman",
   links: {
-    github: "https://github.com/OsamaASidd",
-    linkedin: "https://linkedin.com/in/osama-ahmed-siddiqui",
-    upwork: "https://www.upwork.com",
+    whatsapp: "https://wa.me/96871207881",
   },
-  resumeUrl: "/assets/Osama-Ahmed-Siddiqui-CV.pdf",
   legal: {
     entityName: "Alliance Orbit Trading and Contracting",
     registrationNumber: "1640588",
     licenseNumber: "L3899168",
     jurisdiction: "Sultanate of Oman",
+    address:
+      "Suite # 106, G.Gold Compound, Gold Street, Main Ruwi Road, Postal Code 112, Muscat, Oman",
   },
 };
 
 export const nav = [
   { href: "/erp/", label: "ERP" },
   { href: "/ai/", label: "AI" },
+  { href: "/web-mobile/", label: "Web & Mobile" },
   { href: "/work/", label: "Work" },
   { href: "/about/", label: "About" },
   { href: "/contact/", label: "Contact" },
 ];
 
 export const stats = [
-  { value: "5+", label: "Years building ERP and AI systems" },
-  { value: "16+", label: "Big clients kept compliant on e-invoicing" },
-  { value: "4", label: "Apps published for other ERPNext users" },
+  { value: "25+", label: "Years of ERP implementation & system design experience" },
+  { value: "5+", label: "Years in e-invoicing integration & AI automation" },
+  { value: "16+", label: "Tier-1 clients kept compliant on e-invoicing" },
   { value: "45K+", label: "Records processed automatically, every day" },
 ];
 
@@ -52,7 +52,7 @@ export const pillars: Pillar[] = [
     name: "Implementation",
     pitch: "Get every system talking, and stay compliant while you do it.",
     description:
-      "Backed by 35+ years of combined ERP experience, we set up and connect the systems that run your business — SAP, Sage, Microsoft Dynamics 365, Oracle, and ERPNext — and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
+      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business — ERPNext as our primary focus, plus SAP, Sage, Microsoft Dynamics 365, and Oracle — and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
   },
   {
     slug: "ai",
@@ -60,7 +60,91 @@ export const pillars: Pillar[] = [
     name: "Integration",
     pitch: "Production AI and automation that removes manual work, not adds to it.",
     description:
-      "From AI assistants and voice bots to computer vision and workflow automation, we build AI that plugs into the tools your team already uses — Slack, Airtable, Google Drive, your ERP — instead of yet another dashboard nobody opens.",
+      "Built on 5+ years of hands-on delivery, we build AI that plugs into the tools your team already uses — Slack, Airtable, Google Drive, your ERP — instead of yet another dashboard nobody opens.",
+  },
+];
+
+export type DigitalService = {
+  icon: IconKey;
+  name: string;
+  description: string;
+};
+
+export const webServices: DigitalService[] = [
+  {
+    icon: "code",
+    name: "Custom Web Applications",
+    description:
+      "Business portals, internal tools, and customer-facing platforms built around how your business actually works, not a generic template.",
+  },
+  {
+    icon: "layers",
+    name: "ERP-Connected Websites & Portals",
+    description:
+      "Corporate sites and customer/vendor portals that read and write directly to your ERP, so there's no manual re-entry between the two.",
+  },
+  {
+    icon: "swap",
+    name: "E-Commerce Solutions",
+    description:
+      "Storefronts connected to your inventory and accounting, so stock levels and orders stay in sync automatically.",
+  },
+  {
+    icon: "gauge",
+    name: "Backend Engineering & Performance",
+    description:
+      "Scalable backend systems, database design, and API integrations built to hold up under real production load.",
+  },
+  {
+    icon: "workflow",
+    name: "DevOps & Cloud Deployment",
+    description:
+      "CI/CD pipelines and cloud hosting on AWS, Azure, or Google Cloud, so releases ship reliably instead of by hand.",
+  },
+  {
+    icon: "chart",
+    name: "Dashboards & Reporting",
+    description:
+      "Custom reporting layers and admin dashboards built on top of your existing data, ERP included.",
+  },
+];
+
+export const mobileServices: DigitalService[] = [
+  {
+    icon: "bot",
+    name: "iOS & Android App Development",
+    description:
+      "Native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps for field teams, customers, or internal operations.",
+  },
+  {
+    icon: "layers",
+    name: "ERP-Connected Mobile Apps",
+    description:
+      "Field-sales, inventory, and approval apps that sync directly with your ERP in real time, not on a nightly batch job.",
+  },
+  {
+    icon: "eye",
+    name: "App UI/UX Design",
+    description:
+      "Interfaces designed for the people who'll use them every day on the job, not just a demo screenshot.",
+  },
+  {
+    icon: "scan",
+    name: "App Modernization",
+    description:
+      "Rebuilding outdated apps with better performance, modern frameworks, and a cleaner user experience.",
+  },
+  {
+    icon: "gauge",
+    name: "Testing & Security",
+    description:
+      "Functional, performance, and security testing before anything reaches your users.",
+  },
+  {
+    icon: "trending",
+    name: "App Store Deployment",
+    description:
+      "We handle submission and release on the Apple App Store and Google Play, start to finish.",
   },
 ];
 
@@ -75,6 +159,34 @@ export type CaseStudy = {
 };
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: "erpnext-fmcg-manufacturing",
+    title: "ERPNext implementation for a medium-sized FMCG manufacturer",
+    client: "Medium-Sized FMCG Manufacturing Company",
+    pillar: "erp",
+    summary:
+      "Implemented ERPNext across procurement, inventory, production, sales, and financial accounting for a medium-sized FMCG manufacturer, replacing disconnected systems and manual processes with one integrated platform.",
+    details: [
+      "Deployed the Manufacturing module to manage production, bills of materials, raw materials, and finished-goods inventory.",
+      "Unified procurement, sales, stock, and financial accounting inside a single ERPNext instance.",
+      "Built custom reporting, dashboards, and workflow customizations around existing business processes.",
+    ],
+    stack: ["ERPNext", "Frappe", "Manufacturing", "Python"],
+  },
+  {
+    slug: "erpnext-engineering-construction",
+    title: "ERPNext implementation for a large engineering & construction company",
+    client: "Large Engineering & Construction Company — Oil & Gas Sector, Pakistan",
+    pillar: "erp",
+    summary:
+      "Implementing ERPNext to bring project management, procurement, inventory, costing, and financial accounting together for a large engineering and construction operator running large-scale oil & gas exploration projects.",
+    details: [
+      "Covers project and contract management, procurement, and supplier/subcontractor management.",
+      "Built material planning, project costing, and workflow-based approvals around complex operational requirements.",
+      "Custom ERPNext extensions and management dashboards tailored to engineering and construction operations.",
+    ],
+    stack: ["ERPNext", "Frappe", "Project Costing", "Python"],
+  },
   {
     slug: "nigeria-firs-multi-erp-rollout",
     title: "Multi-ERP e-invoicing compliance across 16+ Tier-1 clients",
@@ -316,15 +428,6 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-export const certifications = [
-  "Official ERPNext/Frappe Partner — Oman",
-  "IBM Data Science Professional Certificate — Coursera",
-  "Full Stack Frappe Developer — Frappe School",
-  "Neural Networks & Deep Learning — DeepLearning.AI",
-  "LLM & RAG — freeCodeCamp",
-  "SQL Intermediate, Power BI & Excel — DataCamp",
-];
-
 export type ErpModule = {
   name: string;
   description: string;
@@ -370,7 +473,13 @@ export const erpServices: CatalogService[] = [
       "A proper production setup with SSL, not just a demo instance",
     ],
     modules: erpModules,
-    relatedCaseStudies: ["erpnext-finance-hr-ops", "frappe-crm-data-warehouse", "midway-logistics-erpnext"],
+    relatedCaseStudies: [
+      "erpnext-fmcg-manufacturing",
+      "erpnext-engineering-construction",
+      "erpnext-finance-hr-ops",
+      "frappe-crm-data-warehouse",
+      "midway-logistics-erpnext",
+    ],
   },
   {
     slug: "sap-abap-s4hana",

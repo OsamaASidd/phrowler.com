@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { nav, erpServices, aiServices } from "@/lib/data";
+import { nav, erpServices, aiServices, webMobileServices } from "@/lib/data";
 
 const catalogs: Record<string, typeof erpServices> = {
   "/erp/": erpServices,
   "/ai/": aiServices,
+  "/web-mobile/": webMobileServices,
 };
 
 export default function MobileNav() {

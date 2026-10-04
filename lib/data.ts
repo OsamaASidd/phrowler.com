@@ -64,90 +64,6 @@ export const pillars: Pillar[] = [
   },
 ];
 
-export type DigitalService = {
-  icon: IconKey;
-  name: string;
-  description: string;
-};
-
-export const webServices: DigitalService[] = [
-  {
-    icon: "code",
-    name: "Custom Web Applications",
-    description:
-      "Business portals, internal tools, and customer-facing platforms built around how your business actually works, not a generic template.",
-  },
-  {
-    icon: "layers",
-    name: "ERP-Connected Websites & Portals",
-    description:
-      "Corporate sites and customer/vendor portals that read and write directly to your ERP, so there's no manual re-entry between the two.",
-  },
-  {
-    icon: "swap",
-    name: "E-Commerce Solutions",
-    description:
-      "Storefronts connected to your inventory and accounting, so stock levels and orders stay in sync automatically.",
-  },
-  {
-    icon: "gauge",
-    name: "Backend Engineering & Performance",
-    description:
-      "Scalable backend systems, database design, and API integrations built to hold up under real production load.",
-  },
-  {
-    icon: "workflow",
-    name: "DevOps & Cloud Deployment",
-    description:
-      "CI/CD pipelines and cloud hosting on AWS, Azure, or Google Cloud, so releases ship reliably instead of by hand.",
-  },
-  {
-    icon: "chart",
-    name: "Dashboards & Reporting",
-    description:
-      "Custom reporting layers and admin dashboards built on top of your existing data, ERP included.",
-  },
-];
-
-export const mobileServices: DigitalService[] = [
-  {
-    icon: "bot",
-    name: "iOS & Android App Development",
-    description:
-      "Native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps for field teams, customers, or internal operations.",
-  },
-  {
-    icon: "layers",
-    name: "ERP-Connected Mobile Apps",
-    description:
-      "Field-sales, inventory, and approval apps that sync directly with your ERP in real time, not on a nightly batch job.",
-  },
-  {
-    icon: "eye",
-    name: "App UI/UX Design",
-    description:
-      "Interfaces designed for the people who'll use them every day on the job, not just a demo screenshot.",
-  },
-  {
-    icon: "scan",
-    name: "App Modernization",
-    description:
-      "Rebuilding outdated apps with better performance, modern frameworks, and a cleaner user experience.",
-  },
-  {
-    icon: "gauge",
-    name: "Testing & Security",
-    description:
-      "Functional, performance, and security testing before anything reaches your users.",
-  },
-  {
-    icon: "trending",
-    name: "App Store Deployment",
-    description:
-      "We handle submission and release on the Apple App Store and Google Play, start to finish.",
-  },
-];
-
 export type CaseStudy = {
   slug: string;
   title: string;
@@ -446,7 +362,7 @@ export const erpModules: ErpModule[] = [
 
 export type CatalogService = {
   slug: string;
-  category: "erp" | "ai";
+  category: "erp" | "ai" | "web" | "mobile";
   icon: IconKey;
   name: string;
   tagline: string;
@@ -786,7 +702,207 @@ export const aiServices: CatalogService[] = [
   },
 ];
 
-export const allCatalogServices = [...erpServices, ...aiServices];
+export const webServices: CatalogService[] = [
+  {
+    slug: "custom-web-applications",
+    category: "web",
+    icon: "code",
+    name: "Custom Web Applications",
+    tagline: "Business portals and platforms built around how your business actually works.",
+    description:
+      "We build custom web applications — business portals, internal tools, customer-facing platforms — designed around your actual processes, not a generic template.",
+    capabilities: [
+      "Business and customer/vendor portals",
+      "Internal tools built around your actual workflow",
+      "Custom UI/UX, not a templated theme",
+      "Built to integrate with your other systems from day one",
+    ],
+    relatedCaseStudies: ["erpnext-cross-platform-automation"],
+  },
+  {
+    slug: "erp-connected-portals",
+    category: "web",
+    icon: "layers",
+    name: "ERP-Connected Websites & Portals",
+    tagline: "Corporate sites and portals that read and write directly to your ERP.",
+    description:
+      "Corporate sites and customer/vendor portals that connect directly to ERPNext, SAP, Sage, Dynamics 365, or Oracle, so there's no manual re-entry between the two.",
+    capabilities: [
+      "Customer and vendor self-service portals",
+      "Corporate websites wired into live ERP data",
+      "Single sign-on and role-based access",
+      "No duplicate data entry between site and ERP",
+    ],
+    relatedCaseStudies: ["erpnext-finance-hr-ops", "frappe-crm-data-warehouse"],
+  },
+  {
+    slug: "ecommerce-solutions",
+    category: "web",
+    icon: "swap",
+    name: "E-Commerce Solutions",
+    tagline: "Storefronts connected to your inventory and accounting.",
+    description:
+      "Storefronts connected to your inventory and accounting, so stock levels and orders stay in sync automatically instead of two systems quietly drifting apart.",
+    capabilities: [
+      "Storefront wired directly into ERP inventory",
+      "Orders and payments flowing straight into accounting",
+      "No manual stock reconciliation",
+      "Built on the platform that fits your catalog, not a one-size-fits-all theme",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "backend-performance-engineering",
+    category: "web",
+    icon: "gauge",
+    name: "Backend Engineering & Performance",
+    tagline: "Scalable backend systems built to hold up under real production load.",
+    description:
+      "Database design, API integrations, and backend systems engineered to hold up under real production load — and tuned when an existing system is already struggling.",
+    capabilities: [
+      "Database schema and query performance tuning",
+      "API design and third-party integrations",
+      "Caching and infrastructure tuning for systems under load",
+      "Diagnosing and fixing production performance issues",
+    ],
+    relatedCaseStudies: ["erpnext-performance-tuning-falcon-i"],
+  },
+  {
+    slug: "devops-cloud-deployment",
+    category: "web",
+    icon: "workflow",
+    name: "DevOps & Cloud Deployment",
+    tagline: "CI/CD pipelines and cloud hosting, so releases ship reliably.",
+    description:
+      "CI/CD pipelines and cloud hosting on AWS, Azure, Google Cloud, or Vercel, so releases ship reliably instead of by hand.",
+    capabilities: [
+      "CI/CD pipeline setup",
+      "Cloud hosting and infrastructure configuration",
+      "Production deployment, not just a demo instance",
+      "SSL, environments, and release process set up properly",
+    ],
+    relatedCaseStudies: ["keto-gpt-rag"],
+  },
+  {
+    slug: "dashboards-reporting",
+    category: "web",
+    icon: "chart",
+    name: "Dashboards & Reporting",
+    tagline: "Custom reporting layers built on top of your existing data.",
+    description:
+      "Custom reporting layers and admin dashboards built on top of your existing data — ERP included — so the numbers your team needs are a click away, not a weekly export.",
+    capabilities: [
+      "Custom dashboards built on your real data sources",
+      "Reporting pulled from multiple systems into one view",
+      "Fast queries, even at high data volume",
+      "Built for the reports your team actually opens",
+    ],
+    relatedCaseStudies: ["frappe-crm-data-warehouse", "computer-vision-fashion-tagging"],
+  },
+];
+
+export const mobileServices: CatalogService[] = [
+  {
+    slug: "ios-android-app-development",
+    category: "mobile",
+    icon: "bot",
+    name: "iOS & Android App Development",
+    tagline: "Native and cross-platform apps for field teams, customers, or internal operations.",
+    description:
+      "Native (Swift, Kotlin) and cross-platform (React Native, Flutter) apps for field teams, customers, or internal operations, chosen based on what your project actually needs.",
+    capabilities: [
+      "Native iOS and Android development",
+      "Cross-platform builds with React Native or Flutter",
+      "Offline-capable apps for field use",
+      "Push notifications and background sync",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "erp-connected-mobile-apps",
+    category: "mobile",
+    icon: "layers",
+    name: "ERP-Connected Mobile Apps",
+    tagline: "Field-sales, inventory, and approval apps synced to your ERP in real time.",
+    description:
+      "Field-sales, inventory, and approval apps that sync directly with your ERP in real time, not on a nightly batch job.",
+    capabilities: [
+      "Field-sales and inventory apps tied to live ERP data",
+      "Mobile approval workflows",
+      "Real-time sync, not end-of-day batch jobs",
+      "Works for teams that are offline part of the day",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "app-ui-ux-design",
+    category: "mobile",
+    icon: "eye",
+    name: "App UI/UX Design",
+    tagline: "Interfaces designed for the people who'll use them every day.",
+    description:
+      "Interfaces designed for the people who'll use them every day on the job, not just a demo screenshot — including redesigning the UI/UX of systems you already run.",
+    capabilities: [
+      "UI/UX design for new and existing apps",
+      "Redesigning clunky internal tools people avoid using",
+      "Designed around real daily workflows",
+      "Prototyping before a single line of production code",
+    ],
+    relatedCaseStudies: ["erpnext-cross-platform-automation"],
+  },
+  {
+    slug: "app-modernization",
+    category: "mobile",
+    icon: "scan",
+    name: "App Modernization",
+    tagline: "Rebuilding outdated apps with better performance and a cleaner experience.",
+    description:
+      "Rebuilding outdated apps with better performance, modern frameworks, and a cleaner user experience — without a risky full rewrite where it isn't needed.",
+    capabilities: [
+      "Migrating legacy apps to modern frameworks",
+      "Performance and UX improvements to existing apps",
+      "Incremental modernization, not a risky big-bang rewrite",
+      "Keeping the app running while it's rebuilt",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "testing-security",
+    category: "mobile",
+    icon: "gauge",
+    name: "Testing & Security",
+    tagline: "Functional, performance, and security testing before anything ships.",
+    description:
+      "Functional, performance, and security testing before anything reaches your users, so issues get caught before launch instead of in a one-star review.",
+    capabilities: [
+      "Functional and regression testing",
+      "Performance testing under real load",
+      "Security testing and vulnerability checks",
+      "Clear bug reports your team can act on",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "app-store-deployment",
+    category: "mobile",
+    icon: "trending",
+    name: "App Store Deployment",
+    tagline: "We handle submission and release on the App Store and Google Play.",
+    description:
+      "We handle submission and release on the Apple App Store and Google Play, start to finish, including the parts that usually cause delays.",
+    capabilities: [
+      "App Store and Google Play submission",
+      "Handling review feedback and rejections",
+      "Release and version management",
+      "Post-launch monitoring for crashes and issues",
+    ],
+    relatedCaseStudies: [],
+  },
+];
+
+export const webMobileServices: CatalogService[] = [...webServices, ...mobileServices];
+
+export const allCatalogServices = [...erpServices, ...aiServices, ...webServices, ...mobileServices];
 
 export function getCaseStudiesBySlug(slugs: string[]): CaseStudy[] {
   return slugs

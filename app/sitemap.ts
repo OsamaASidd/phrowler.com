@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { erpServices, aiServices } from "@/lib/data";
+import { erpServices, aiServices, webMobileServices } from "@/lib/data";
 
 export const dynamic = "force-static";
 
@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes = [
     ...erpServices.map((s) => `/erp/${s.slug}`),
     ...aiServices.map((s) => `/ai/${s.slug}`),
+    ...webMobileServices.map((s) => `/web-mobile/${s.slug}`),
   ];
 
   return [...staticRoutes, ...serviceRoutes].map((route) => ({

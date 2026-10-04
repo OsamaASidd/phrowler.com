@@ -1,7 +1,7 @@
 import Container from "./Container";
 import Logo from "./Logo";
 import Button from "./Button";
-import { nav, erpServices, aiServices } from "@/lib/data";
+import { nav, erpServices, aiServices, webMobileServices } from "@/lib/data";
 import MobileNav from "./MobileNav";
 import NavDropdown from "./NavDropdown";
 
@@ -29,6 +29,16 @@ export default function Header() {
                   label={item.label}
                   href={item.href}
                   services={aiServices}
+                />
+              );
+            }
+            if (item.href === "/web-mobile/") {
+              return (
+                <NavDropdown
+                  key={item.href}
+                  label={item.label}
+                  href={item.href}
+                  services={webMobileServices}
                 />
               );
             }

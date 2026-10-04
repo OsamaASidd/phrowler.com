@@ -9,7 +9,9 @@ export const site = {
   whatsapp: "+968 7120 7881",
   location: "Muscat, Oman",
   links: {
-    whatsapp: "https://wa.me/96871207881",
+    whatsapp:
+      "https://wa.me/96871207881?text=" +
+      encodeURIComponent("Hi Phrowler, I'd like to talk about a project."),
   },
   legal: {
     entityName: "Alliance Orbit Trading and Contracting",

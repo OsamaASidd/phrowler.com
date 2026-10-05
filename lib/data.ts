@@ -386,7 +386,7 @@ export const featuredAiProduct: FeaturedProduct = {
   icon: "brain",
   name: "Enterprise Knowledge AI",
   tagline:
-    "Local AI trained exclusively on your business data — predicts risk, prescribes next actions, and helps leadership strategize. Runs on your own infrastructure, cites every answer, and says \"I don't know\" instead of guessing.",
+    "Local AI trained exclusively on your business data that predicts risk, prescribes next actions, and helps leadership strategize. Runs on your own infrastructure, cites every answer, and says \"I don't know\" instead of guessing.",
 };
 
 export const erpServices: CatalogService[] = [

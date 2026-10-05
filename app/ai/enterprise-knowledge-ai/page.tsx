@@ -7,13 +7,13 @@ import { CatalogIcon, type IconKey } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Enterprise Knowledge AI",
   description:
-    "Local AI trained exclusively on your business data — predicts risk, prescribes next actions, and helps leadership strategize. Runs on your own infrastructure, cites every answer.",
+    "Local AI trained exclusively on your business data that predicts risk, prescribes next actions, and helps leadership strategize. Runs on your own infrastructure, with every answer cited.",
 };
 
 const stats = [
   { value: "42%", label: "of critical business knowledge is lost when people leave. Every year." },
   { value: "61%", label: "of businesses make decisions on data that is 6+ months stale." },
-  { value: "900+", label: "disconnected apps — the average enterprise runs this many simultaneously." },
+  { value: "900+", label: "disconnected apps the average enterprise runs simultaneously." },
   { value: "$47M", label: "average annual cost of poor knowledge management. Per company." },
 ];
 
@@ -33,9 +33,9 @@ const chat = [
 type Feature = { icon: IconKey; name: string; body: string };
 
 const meetPhrowler: Feature[] = [
-  { icon: "trending", name: "Predict — Risk & Forecast", body: "Spot risks 30–90 days ahead, before they show up on a P&L." },
-  { icon: "workflow", name: "Prescribe — Next Best Action", body: "Step-by-step next actions generated directly from your own data." },
-  { icon: "chart", name: "Strategize — Market & Growth", body: "Beat competitors with live market intelligence built into every answer." },
+  { icon: "trending", name: "Predict: Risk & Forecast", body: "Spot risks 30-90 days ahead, before they show up on a P&L." },
+  { icon: "workflow", name: "Prescribe: Next Best Action", body: "Step-by-step next actions generated directly from your own data." },
+  { icon: "chart", name: "Strategize: Market & Growth", body: "Beat competitors with live market intelligence built into every answer." },
 ];
 
 const localAi: Feature[] = [
@@ -46,24 +46,24 @@ const localAi: Feature[] = [
 ];
 
 const dataControl: Feature[] = [
-  { icon: "layers", name: "Private Deployment", body: "Your instance runs on your infrastructure — cloud or on-premise. No data shared with any third party, ever." },
+  { icon: "layers", name: "Private Deployment", body: "Your instance runs on your infrastructure, cloud or on-premise, with no data shared with any third party, ever." },
   { icon: "eye", name: "Role-Based Access", body: "Granular permissions by team, department, or individual. Your CFO sees financials; your ops team sees ops." },
   { icon: "scan", name: "Audit Trail", body: "Every query, every output is logged. Full visibility into what was asked, what was answered, and by whom." },
-  { icon: "gauge", name: "Enterprise-Grade Encryption", body: "AES-256 at rest, TLS 1.3 in transit. SOC 2 Type II–compliant architecture as standard." },
+  { icon: "gauge", name: "Enterprise-Grade Encryption", body: "AES-256 at rest, TLS 1.3 in transit. SOC 2 Type II-compliant architecture as standard." },
 ];
 
 const adoption: Feature[] = [
   { icon: "sparkle", name: "One-Click Functionality", body: "A modern, intuitive design language where every insight is one click away. No manuals, no learning curve." },
   { icon: "bot", name: "Ready-to-Use Platform", body: "No lengthy implementation cycles. Just plug in your data source and start asking questions from day one." },
-  { icon: "swap", name: "Anytime, Anywhere Access", body: "Device-agnostic by design — the same seamless experience on your phone, tablet, or PC." },
+  { icon: "swap", name: "Anytime, Anywhere Access", body: "Device-agnostic by design, with the same seamless experience on your phone, tablet, or PC." },
   { icon: "eye", name: "One-Click Access Control", body: "Simple user management lets you control and restrict exactly what each user can see and view." },
   { icon: "layers", name: "One Stop Shop", body: "One simple solution for the data-analysis needs of every user, role, and department in your organization." },
 ];
 
 const purposeBuilt: Feature[] = [
   { icon: "sparkle", name: "Customized for Your Business", body: "Eliminates the noise of generic GPT tools and delivers clear insights tailored to your specific business needs." },
-  { icon: "chart", name: "Information Simplified", body: "Converts your data into simple, intuitive visuals and summaries — so decisions are quick and informed." },
-  { icon: "trending", name: "Empowered Decision Making", body: "Every decision grounded in facts and data — not emotion and instinct." },
+  { icon: "chart", name: "Information Simplified", body: "Converts your data into simple, intuitive visuals and summaries, so decisions are quick and informed." },
+  { icon: "trending", name: "Empowered Decision Making", body: "Every decision grounded in facts and data, not emotion and instinct." },
   { icon: "gauge", name: "Privacy & Security", body: "End-to-end encryption as standard, with an extra layer via dedicated cloud or on-premise deployment." },
   { icon: "receipt", name: "Cost Control & Management", body: "A dedicated module gives in-depth visibility of every token used, with easy-to-implement usage and cost controls." },
 ];
@@ -99,12 +99,12 @@ export default function EnterpriseKnowledgeAiPage() {
             Enterprise GPT for your business data
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-brand">
-            Your business already has the answers. You just can&apos;t hear them — yet.
+            Your business already has the answers. You just can&apos;t hear them yet.
           </p>
           <p className="mt-4 max-w-2xl text-muted">
-            An always-on AI knowledge worker for decision-making — trained
-            exclusively on your business data, so it predicts risk,
-            prescribes next actions, and helps leadership strategize.
+            An always-on AI knowledge worker for decision-making, trained
+            exclusively on your business data to predict risk, prescribe
+            next actions, and help leadership strategize.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-6">
             <Button href="/contact/">Book a demo</Button>
@@ -159,7 +159,7 @@ export default function EnterpriseKnowledgeAiPage() {
       <section className="border-b border-border">
         <Container className="py-16">
           <h2 className="text-xl font-semibold tracking-tight text-foreground">
-            Meet Phrowler — enterprise GPT, trained exclusively on your data
+            Meet Phrowler: enterprise GPT, trained exclusively on your data
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted">
             Not generic AI. Not another dashboard. Your institutional
@@ -175,7 +175,7 @@ export default function EnterpriseKnowledgeAiPage() {
             Local AI. Grounded answers. No slop.
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted">
-            Runs inside your network and answers from your records — not
+            Runs inside your network and answers from your records, not
             from the open internet.
           </p>
           <FeatureGrid features={localAi} cols="lg:grid-cols-4" />
@@ -188,7 +188,7 @@ export default function EnterpriseKnowledgeAiPage() {
             Your data never leaves your control
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted">
-            The first question every enterprise asks — and the right one.
+            The first question every enterprise asks, and the right one.
           </p>
           <FeatureGrid features={dataControl} cols="lg:grid-cols-4" />
         </Container>

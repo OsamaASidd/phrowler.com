@@ -44,7 +44,7 @@ export default function Footer() {
       </Container>
       <Container className="border-t border-border py-6">
         <p className="text-xs text-muted">
-          © {new Date().getFullYear()} {site.name}. All rights reserved.
+          © 2016 {site.name}. All rights reserved.
         </p>
         <p className="mt-1 text-xs text-muted">
           {site.name} is the trading name of {site.legal.entityName}, CR No.{" "}

@@ -2,7 +2,7 @@ import type { IconKey } from "@/components/icons";
 
 export const site = {
   name: "Phrowler",
-  tagline: "25+ Years of ERP Expertise. Compliance & AI Solutions.",
+  tagline: "25+ Years of ERP Expertise, Compliance & Fullstack AI Solutions.",
   description:
     "Phrowler brings 25+ years of ERP implementation and system design experience, plus 5+ years in e-invoicing integration and AI automation, helping businesses implement ERPNext, stay compliant, and automate the busywork.",
   email: "info@phrowler.com",

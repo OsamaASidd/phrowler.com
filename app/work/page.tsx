@@ -54,7 +54,7 @@ export default function WorkPage() {
                   {project.details.map((d) => (
                     <li
                       key={d}
-                      className="text-sm text-muted before:mr-2 before:text-brand before:content-['—']"
+                      className="text-sm text-muted before:mr-2 before:text-brand before:content-['-']"
                     >
                       {d}
                     </li>

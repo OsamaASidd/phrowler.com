@@ -47,16 +47,16 @@ export default function AboutPage() {
               25+ years of ERP, 5+ years of e-invoicing &amp; AI
             </h2>
             <p className="mt-4 text-sm text-muted">
-              Our expertise spans multiple ERP platforms — ERPNext, Sage,
+              Our expertise spans multiple ERP platforms (ERPNext, Sage,
               Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and
-              Odoo — with a strong focus on implementation, customization,
+              Odoo), with a strong focus on implementation, customization,
               financial systems, and enterprise integration.
             </p>
             <p className="mt-4 text-sm text-muted">
               In recent years, we&apos;ve expanded into e-invoicing
               integration, tax-authority connectivity, and AI-based
               application development, with over five years of practical,
-              production experience in these emerging areas — including
+              production experience in these emerging areas, including
               Nigeria FIRS and Pakistan FBR e-invoicing pipelines across
               SAP, Sage, Dynamics 365, and ERPNext, and AI systems spanning
               RAG/LLM applications, computer vision, and workflow

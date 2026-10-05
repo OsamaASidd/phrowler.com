@@ -12,13 +12,13 @@ import { CatalogIcon } from "@/components/icons";
 export const metadata: Metadata = {
   title: "Web & Mobile Development",
   description:
-    "Web applications, portals, and mobile apps that connect directly to your ERP — built by the same team that implements it.",
+    "Web applications, portals, and mobile apps that connect directly to your ERP, built by the same team that implements it.",
 };
 
 const faqs = [
   {
     q: "Do you only build apps that connect to an ERP?",
-    a: "No — but it's where we're strongest. If your project doesn't touch an ERP at all, we're still happy to help; it's just not the only thing we do.",
+    a: "No, but it's where we're strongest. If your project doesn't touch an ERP at all, we're still happy to help; it's just not the only thing we do.",
   },
   {
     q: "How long does a typical project take?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Native or cross-platform mobile apps?",
-    a: "Both — we pick based on what the project actually needs, not a default preference.",
+    a: "Both. We pick based on what the project actually needs, not a default preference.",
   },
   {
     q: "Can you take over an existing app instead of starting from scratch?",
@@ -75,7 +75,7 @@ export default function WebMobilePage() {
           </h1>
           <p className="mt-6 max-w-2xl text-muted">
             Business portals, customer and vendor apps, e-commerce, and
-            field-operations tools — built to read and write directly to
+            field-operations tools built to read and write directly to
             ERPNext, Sage, Dynamics 365, Oracle, Zoho Books, QuickBooks, or
             Odoo, so your team never re-types the same data twice.
           </p>
@@ -95,7 +95,7 @@ export default function WebMobilePage() {
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted">
             Custom web applications, business portals, and e-commerce
-            platforms — connected to your ERP where it matters.
+            platforms, connected to your ERP where it matters.
           </p>
           <ServiceGrid services={webServices} basePath="/web-mobile/" />
         </Container>
@@ -108,7 +108,7 @@ export default function WebMobilePage() {
           </h2>
           <p className="mt-3 max-w-2xl text-sm text-muted">
             Native and cross-platform apps for field teams, customers, and
-            internal operations — from first prototype to App Store release.
+            internal operations, from first prototype to App Store release.
           </p>
           <ServiceGrid services={mobileServices} basePath="/web-mobile/" />
         </Container>

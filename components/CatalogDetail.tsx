@@ -68,7 +68,7 @@ export default function CatalogDetail({
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-muted">
               A typical rollout covers whichever of these your business
-              needs — we don&apos;t make you buy the whole suite to get one
+              needs. We don&apos;t make you buy the whole suite to get one
               piece working.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

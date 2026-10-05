@@ -47,8 +47,8 @@ export default function Home() {
               Keep your ERP connected, compliant, and running smoothly.
             </h1>
             <p className="mt-6 max-w-md text-muted">
-              With 25+ years of ERP implementation experience — and 5+ years
-              building e-invoicing integrations and AI automation — we set
+              With 25+ years of ERP implementation experience, and 5+ years
+              building e-invoicing integrations and AI automation, we set
               up and connect ERPNext, Sage, Microsoft Dynamics 365, Oracle,
               Zoho Books, QuickBooks, and Odoo, then keep you compliant and
               automate the busywork.
@@ -106,7 +106,7 @@ export default function Home() {
               What we do
             </h2>
             <p className="mt-3 text-muted">
-              Two disciplines, one team — because the hardest problems live
+              Two disciplines, one team, because the hardest problems live
               where your ERP meets your automation.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function Home() {
                   {previewByPillar[pillar.slug].map((service) => (
                     <li
                       key={service.slug}
-                      className="text-sm text-foreground before:mr-2 before:text-brand before:content-['—']"
+                      className="text-sm text-foreground before:mr-2 before:text-brand before:content-['-']"
                     >
                       {service.name}
                     </li>

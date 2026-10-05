@@ -4,7 +4,7 @@ export const site = {
   name: "Phrowler",
   tagline: "25+ Years of ERP Expertise. Modern ERPNext & AI Solutions.",
   description:
-    "Phrowler brings 25+ years of ERP implementation and system design experience, plus 5+ years in e-invoicing integration and AI automation — helping businesses implement ERPNext, stay compliant, and automate the busywork.",
+    "Phrowler brings 25+ years of ERP implementation and system design experience, plus 5+ years in e-invoicing integration and AI automation, helping businesses implement ERPNext, stay compliant, and automate the busywork.",
   email: "info@phrowler.com",
   whatsapp: "+968 7120 7881",
   location: "Muscat, Oman",
@@ -54,7 +54,7 @@ export const pillars: Pillar[] = [
     name: "Implementation",
     pitch: "Get every system talking, and stay compliant while you do it.",
     description:
-      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business — ERPNext as our primary focus, plus Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo — and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
+      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business, with ERPNext as our primary focus, plus Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo, and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
   },
   {
     slug: "ai",
@@ -62,7 +62,7 @@ export const pillars: Pillar[] = [
     name: "Integration",
     pitch: "Production AI and automation that removes manual work, not adds to it.",
     description:
-      "Built on 5+ years of hands-on delivery, we build AI that plugs into the tools your team already uses — Slack, Airtable, Google Drive, your ERP — instead of yet another dashboard nobody opens.",
+      "Built on 5+ years of hands-on delivery, we build AI that plugs into the tools your team already uses (Slack, Airtable, Google Drive, your ERP) instead of yet another dashboard nobody opens.",
   },
 ];
 
@@ -94,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "erpnext-engineering-construction",
     title: "ERPNext implementation for a large engineering & construction company",
-    client: "Large Engineering & Construction Company — Oil & Gas Sector, Pakistan",
+    client: "Large Engineering & Construction Company, Oil & Gas Sector, Pakistan",
     pillar: "erp",
     summary:
       "Implementing ERPNext to bring project management, procurement, inventory, costing, and financial accounting together for a large engineering and construction operator running large-scale oil & gas exploration projects.",
@@ -108,7 +108,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "nigeria-firs-multi-erp-rollout",
     title: "Multi-ERP e-invoicing compliance across 16+ Tier-1 clients",
-    client: "Nigeria FIRS/NRS — Access Point Provider engagement",
+    client: "Nigeria FIRS/NRS, Access Point Provider engagement",
     pillar: "erp",
     summary:
       "Architected cross-ERP payload transformations and IRN/QR injection flows enabling FIRS/NRS e-invoicing compliance across SAP, Oracle, Sage, and Dynamics 365 ecosystems.",
@@ -125,7 +125,7 @@ export const caseStudies: CaseStudy[] = [
     client: "Proton Security Services, Genesis Group, Swift Oil, Chorus Energy",
     pillar: "erp",
     summary:
-      "Delivered FIRS-compliant e-invoicing integrations across Sage 50, Sage 200, Sage Evolution, and Sage X3 — each requiring a different integration approach.",
+      "Delivered FIRS-compliant e-invoicing integrations across Sage 50, Sage 200, Sage Evolution, and Sage X3, each requiring a different integration approach.",
     details: [
       "Sage 50: Pervasive ODBC connector feeding a 32-bit Python/Flask compliance dashboard for Proton Security Services.",
       "Sage 200: ODBC middleware integration for Genesis Group.",
@@ -164,7 +164,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "erpnext-finance-hr-ops",
     title: "ERPNext Finance/HR/Operations consolidation",
-    client: "Orion Group LLC — Rentals Management, UAE",
+    client: "Orion Group LLC, Rentals Management, UAE",
     pillar: "erp",
     summary:
       "Consolidated three departmental systems into a single ERPNext implementation with custom workflows and analytics, reducing reporting cycle time.",
@@ -229,7 +229,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "midway-logistics-erpnext",
     title: "ERPNext implementation for a road and rail logistics operator",
-    client: "Midway Logistics — Road & Rail Logistics, Pakistan",
+    client: "Midway Logistics, Road & Rail Logistics, Pakistan",
     pillar: "erp",
     summary:
       "Implemented ERPNext to run Midway Logistics' core operations on a single system, replacing fragmented tools across their road and rail freight business.",
@@ -240,7 +240,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "keto-gpt-rag",
-    title: "KETO GPT — a deployed RAG application",
+    title: "KETO GPT: a deployed RAG application",
     client: "Direct-to-consumer nutrition product",
     pillar: "ai",
     summary:
@@ -268,7 +268,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "computer-vision-fashion-tagging",
     title: "Computer vision pipeline for automated product tagging",
-    client: "Lookflock — 55 fashion brands",
+    client: "Lookflock (55 fashion brands)",
     pillar: "ai",
     summary:
       "Built a computer vision and NLP pipeline processing 45,000+ daily data points across 55 fashion brands, cutting manual categorization effort by 60%.",
@@ -282,7 +282,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "n8n-facebook-ads-pipeline",
     title: "Facebook Ads to ERPNext lead pipeline",
-    client: "LabPro Pharma — Medicine Distribution, Africa (Cameroon, Nigeria, DRC)",
+    client: "LabPro Pharma, Medicine Distribution, Africa (Cameroon, Nigeria, DRC)",
     pillar: "ai",
     summary:
       "Built an n8n pipeline moving leads from Facebook Ads directly into ERPNext and configured a multi-company Chart of Accounts to unify sales and dispatching across three country entities.",
@@ -308,7 +308,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "tourism-ocr-app",
     title: "Tourism management app with passport OCR",
-    client: "TravelApp — Tourism Agency, Pakistan",
+    client: "TravelApp, Tourism Agency, Pakistan",
     pillar: "ai",
     summary:
       "Released a Tourism Management application on Frappe with a global-passport OCR module and S3/Google Drive backup pipelines, automating 70% of operational workflows.",
@@ -333,7 +333,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     slug: "resumeai-platform",
-    title: "ResumeAI — resume enhancement platform",
+    title: "ResumeAI: resume enhancement platform",
     client: "Upwork engagement",
     pillar: "ai",
     summary:
@@ -395,9 +395,9 @@ export const erpServices: CatalogService[] = [
     category: "erp",
     icon: "layers",
     name: "ERPNext & Frappe Implementation",
-    tagline: "Official ERPNext/Frappe Partner — Oman.",
+    tagline: "Official ERPNext/Frappe Partner in Oman.",
     description:
-      "As an Official ERPNext/Frappe Partner in Oman, we set up ERPNext from scratch — moving your data over, building the workflows you actually use, and getting every department off spreadsheets and onto one system.",
+      "As an Official ERPNext/Frappe Partner in Oman, we set up ERPNext from scratch: moving your data over, building the workflows you actually use, and getting every department off spreadsheets and onto one system.",
     capabilities: [
       "Moving your existing data over from spreadsheets or old systems",
       "Custom Frappe app development for anything ERPNext doesn't do out of the box",
@@ -455,7 +455,7 @@ export const erpServices: CatalogService[] = [
     name: "Oracle Fusion Implementation & Integration",
     tagline: "Setup and integration for Oracle Fusion, including e-invoicing.",
     description:
-      "We set up Oracle Fusion and connect it to the compliance and reporting systems you need — including moving your e-invoicing over if you're switching providers.",
+      "We set up Oracle Fusion and connect it to the compliance and reporting systems you need, including moving your e-invoicing over if you're switching providers.",
     capabilities: [
       "Full implementation and configuration of Oracle Fusion",
       "Moving e-invoicing over from another provider with no gap in compliance",
@@ -470,7 +470,7 @@ export const erpServices: CatalogService[] = [
     category: "erp",
     icon: "receipt",
     name: "E-Invoicing Compliance",
-    tagline: "Government e-invoicing rules, handled — whatever ERP you run.",
+    tagline: "Government e-invoicing rules, handled, whatever ERP you run.",
     description:
       "Governments increasingly require invoices to be submitted digitally, in a specific format, straight to the tax authority. We connect your ERP directly to that system, so every invoice goes out compliant, automatically.",
     capabilities: [
@@ -512,7 +512,7 @@ export const erpServices: CatalogService[] = [
     name: "ERP Data Warehousing & Reporting",
     tagline: "One set of numbers, pulled from every system you run.",
     description:
-      "If your sales, finance, and operations data live in different systems, we pull it all into one place — so your reports finally agree with each other, without manual reconciliation.",
+      "If your sales, finance, and operations data live in different systems, we pull it all into one place, so your reports finally agree with each other, without manual reconciliation.",
     capabilities: [
       "Pulling data automatically from multiple ERP and CRM sources",
       "One central reporting layer instead of five spreadsheets",
@@ -528,7 +528,7 @@ export const erpServices: CatalogService[] = [
     name: "ERPNext Performance Tuning",
     tagline: "For when ERPNext is running slow and nobody can tell you why.",
     description:
-      "We dig into what's actually slowing your ERPNext system down — usually the database or caching setup — and fix it so it runs reliably again.",
+      "We dig into what's actually slowing your ERPNext system down, usually the database or caching setup, and fix it so it runs reliably again.",
     capabilities: [
       "Finding the real cause of timeouts and slow pages",
       "Database configuration tuning",
@@ -544,7 +544,7 @@ export const erpServices: CatalogService[] = [
     name: "Zoho Books Implementation & Integration",
     tagline: "Setup, customization, and integration for Zoho Books.",
     description:
-      "We set up Zoho Books and connect it to the rest of your Zoho stack — or to ERPNext, your website, and other business tools — so your books stay accurate without manual re-entry.",
+      "We set up Zoho Books and connect it to the rest of your Zoho stack, or to ERPNext, your website, and other business tools, so your books stay accurate without manual re-entry.",
     capabilities: [
       "Zoho Books setup and chart of accounts configuration",
       "Integration with Zoho CRM, Inventory, and the wider Zoho suite",
@@ -561,7 +561,7 @@ export const erpServices: CatalogService[] = [
     name: "QuickBooks Implementation & Integration",
     tagline: "Setup and integration for QuickBooks Online or Desktop.",
     description:
-      "We set up QuickBooks and connect it to your other systems — inventory, CRM, or a custom app — so your accounting data stays in sync instead of living in its own silo.",
+      "We set up QuickBooks and connect it to your other systems (inventory, CRM, or a custom app), so your accounting data stays in sync instead of living in its own silo.",
     capabilities: [
       "QuickBooks Online and Desktop setup and configuration",
       "Chart of accounts and workflow setup around how you invoice and pay",
@@ -578,7 +578,7 @@ export const erpServices: CatalogService[] = [
     name: "Odoo Implementation & Integration",
     tagline: "Modular ERP implementation for growing businesses.",
     description:
-      "We implement Odoo's modular ERP — sales, inventory, accounting, and more — configured around the modules your business actually needs, not the whole suite at once.",
+      "We implement Odoo's modular ERP (sales, inventory, accounting, and more), configured around the modules your business actually needs, not the whole suite at once.",
     capabilities: [
       "Odoo implementation and module configuration",
       "Custom development for anything Odoo doesn't do out of the box",
@@ -599,7 +599,7 @@ export const aiServices: CatalogService[] = [
     name: "Custom AI Assistants",
     tagline: "AI that answers from your own documents, not a generic guess.",
     description:
-      "We build AI assistants that search your own documents and data before answering — a technique called RAG (retrieval-augmented generation) — so responses are grounded in what you actually have, not made up. Shipped as a real, working tool, not a demo.",
+      "We build AI assistants that search your own documents and data before answering, a technique called RAG (retrieval-augmented generation), so responses are grounded in what you actually have, not made up. Shipped as a real, working tool, not a demo.",
     capabilities: [
       "AI trained to search your own documents before answering",
       "Built with LangChain and OpenAI",
@@ -615,7 +615,7 @@ export const aiServices: CatalogService[] = [
     name: "Voice AI Assistants",
     tagline: "AI that can answer your phone, so people don't have to.",
     description:
-      "We build voice assistants for call intake, customer support, and internal workflows — the same AI approach we use for chat, just over the phone — that hand off to a real person when they should.",
+      "We build voice assistants for call intake, customer support, and internal workflows: the same AI approach we use for chat, just over the phone, that hand off to a real person when they should.",
     capabilities: [
       "Handles incoming calls for support or intake",
       "Understands and speaks naturally, not robotic menus",
@@ -631,7 +631,7 @@ export const aiServices: CatalogService[] = [
     name: "Computer Vision Systems",
     tagline: "Software that looks at images or video and understands what's in them.",
     description:
-      "We build tools that automatically tag photos, monitor video feeds, or find visually similar products — tuned to run fast and accurately, even on lightweight hardware.",
+      "We build tools that automatically tag photos, monitor video feeds, or find visually similar products, tuned to run fast and accurately, even on lightweight hardware.",
     capabilities: [
       "Automatic photo and image tagging",
       "Finding visually similar products or items",
@@ -647,7 +647,7 @@ export const aiServices: CatalogService[] = [
     name: "Workflow Automation",
     tagline: "Connect the tools you already use, so they update each other automatically.",
     description:
-      "We connect the tools you already use — your ERP, Slack, Airtable, Google Drive, ad platforms — so data moves between them on its own. No more copying and pasting between systems.",
+      "We connect the tools you already use (your ERP, Slack, Airtable, Google Drive, ad platforms) so data moves between them on its own. No more copying and pasting between systems.",
     capabilities: [
       "Connecting your ERP to Slack, Airtable, and Google Drive",
       "Automatic lead capture from ad platforms into your CRM",
@@ -661,9 +661,9 @@ export const aiServices: CatalogService[] = [
     category: "ai",
     icon: "bot",
     name: "AI Agents That Take Action",
-    tagline: "AI that doesn't just answer questions — it does the task.",
+    tagline: "AI that doesn't just answer questions. It does the task.",
     description:
-      "Most AI tools just answer questions. We build AI that goes a step further — pulling in information from several sources, deciding what to do, and doing it — with guardrails so a person always stays in control.",
+      "Most AI tools just answer questions. We build AI that goes a step further: pulling in information from several sources, deciding what to do, and doing it, with guardrails so a person always stays in control.",
     capabilities: [
       "Pulls signals from multiple sources before deciding anything",
       "Actually executes the task, not just a recommendation",
@@ -679,7 +679,7 @@ export const aiServices: CatalogService[] = [
     name: "Personalization & Recommendations",
     tagline: "Show each customer what they're actually likely to want.",
     description:
-      "We build recommendation systems trained on your own customer behavior and content — the kind that moves a real number, like sales or click-throughs, not just a demo accuracy score.",
+      "We build recommendation systems trained on your own customer behavior and content, the kind that moves a real number, like sales or click-throughs, not just a demo accuracy score.",
     capabilities: [
       "Recommendations trained on your own customer data",
       "Built to move a real metric, not just a lab score",
@@ -695,7 +695,7 @@ export const aiServices: CatalogService[] = [
     name: "Document Data Extraction",
     tagline: "Turn scanned forms, IDs, and passports into usable data automatically.",
     description:
-      "We build tools that read scanned documents — passports, ID cards, forms — and pull out the data automatically, so nobody has to type it in by hand.",
+      "We build tools that read scanned documents (passports, ID cards, forms) and pull out the data automatically, so nobody has to type it in by hand.",
     capabilities: [
       "Reads passports, IDs, and forms automatically",
       "Flags anything it isn't confident about for a human check",
@@ -711,7 +711,7 @@ export const aiServices: CatalogService[] = [
     name: "Forecasting & Predictions",
     tagline: "Predict what's likely to happen next, based on your own data.",
     description:
-      "We build forecasting and prediction tools trained on your real historical data, and wire them into an actual application people use — payments included, if you need them.",
+      "We build forecasting and prediction tools trained on your real historical data, and wire them into an actual application people use, with payments included if you need them.",
     capabilities: [
       "Forecasting trained on your own historical data",
       "Built into a real, usable application",
@@ -727,7 +727,7 @@ export const aiServices: CatalogService[] = [
     name: "AI Chatbots",
     tagline: "A chatbot that actually knows your product, not generic small talk.",
     description:
-      "We build chatbots — on Slack, on your website, or as a standalone tool — that know your specific product, documents, or process, instead of giving generic answers.",
+      "We build chatbots (on Slack, on your website, or as a standalone tool) that know your specific product, documents, or process, instead of giving generic answers.",
     capabilities: [
       "Chatbots for Slack, web, or standalone use",
       "Trained on your specific product or documents",
@@ -741,7 +741,7 @@ export const aiServices: CatalogService[] = [
     category: "ai",
     icon: "layers",
     name: "AI Product Development",
-    tagline: "The full, working app around your AI — not just the AI part.",
+    tagline: "The full, working app around your AI, not just the AI part.",
     description:
       "AI features need a real application around them: logins, payments, dashboards, admin tools. We build all of it, so what ships is a finished product, not just a script.",
     capabilities: [
@@ -762,7 +762,7 @@ export const webServices: CatalogService[] = [
     name: "Custom Web Applications",
     tagline: "Business portals and platforms built around how your business actually works.",
     description:
-      "We build custom web applications — business portals, internal tools, customer-facing platforms — designed around your actual processes, not a generic template.",
+      "We build custom web applications (business portals, internal tools, customer-facing platforms) designed around your actual processes, not a generic template.",
     capabilities: [
       "Business and customer/vendor portals",
       "Internal tools built around your actual workflow",
@@ -810,7 +810,7 @@ export const webServices: CatalogService[] = [
     name: "Backend Engineering & Performance",
     tagline: "Scalable backend systems built to hold up under real production load.",
     description:
-      "Database design, API integrations, and backend systems engineered to hold up under real production load — and tuned when an existing system is already struggling.",
+      "Database design, API integrations, and backend systems engineered to hold up under real production load, and tuned when an existing system is already struggling.",
     capabilities: [
       "Database schema and query performance tuning",
       "API design and third-party integrations",
@@ -842,7 +842,7 @@ export const webServices: CatalogService[] = [
     name: "Dashboards & Reporting",
     tagline: "Custom reporting layers built on top of your existing data.",
     description:
-      "Custom reporting layers and admin dashboards built on top of your existing data — ERP included — so the numbers your team needs are a click away, not a weekly export.",
+      "Custom reporting layers and admin dashboards built on top of your existing data, ERP included, so the numbers your team needs are a click away, not a weekly export.",
     capabilities: [
       "Custom dashboards built on your real data sources",
       "Reporting pulled from multiple systems into one view",
@@ -893,7 +893,7 @@ export const mobileServices: CatalogService[] = [
     name: "App UI/UX Design",
     tagline: "Interfaces designed for the people who'll use them every day.",
     description:
-      "Interfaces designed for the people who'll use them every day on the job, not just a demo screenshot — including redesigning the UI/UX of systems you already run.",
+      "Interfaces designed for the people who'll use them every day on the job, not just a demo screenshot, including redesigning the UI/UX of systems you already run.",
     capabilities: [
       "UI/UX design for new and existing apps",
       "Redesigning clunky internal tools people avoid using",
@@ -909,7 +909,7 @@ export const mobileServices: CatalogService[] = [
     name: "App Modernization",
     tagline: "Rebuilding outdated apps with better performance and a cleaner experience.",
     description:
-      "Rebuilding outdated apps with better performance, modern frameworks, and a cleaner user experience — without a risky full rewrite where it isn't needed.",
+      "Rebuilding outdated apps with better performance, modern frameworks, and a cleaner user experience, without a risky full rewrite where it isn't needed.",
     capabilities: [
       "Migrating legacy apps to modern frameworks",
       "Performance and UX improvements to existing apps",

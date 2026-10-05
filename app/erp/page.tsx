@@ -12,9 +12,9 @@ export default function ErpPage() {
   return (
     <CatalogHub
       eyebrow="ERP"
-      badge="Official ERPNext/Frappe Partner — Oman"
+      badge="Official ERPNext/Frappe Partner in Oman"
       title="ERPNext implementation, backed by 25+ years of ERP experience."
-      intro="Our primary focus is ERPNext implementation and customization — backed by 25+ years of ERP system design experience across Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo, plus e-invoicing compliance across Nigeria, Pakistan, Saudi Arabia, India, and the UK."
+      intro="Our primary focus is ERPNext implementation and customization, backed by 25+ years of ERP system design experience across Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo, plus e-invoicing compliance across Nigeria, Pakistan, Saudi Arabia, India, and the UK."
       services={erpServices}
       basePath="/erp/"
     />

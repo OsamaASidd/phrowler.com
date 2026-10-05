@@ -374,6 +374,21 @@ export type CatalogService = {
   relatedCaseStudies: string[];
 };
 
+export type FeaturedProduct = {
+  href: string;
+  icon: IconKey;
+  name: string;
+  tagline: string;
+};
+
+export const featuredAiProduct: FeaturedProduct = {
+  href: "/ai/enterprise-knowledge-ai/",
+  icon: "brain",
+  name: "Enterprise Knowledge AI",
+  tagline:
+    "Local AI trained exclusively on your business data — predicts risk, prescribes next actions, and helps leadership strategize. Runs on your own infrastructure, cites every answer, and says \"I don't know\" instead of guessing.",
+};
+
 export const erpServices: CatalogService[] = [
   {
     slug: "erpnext-implementation",

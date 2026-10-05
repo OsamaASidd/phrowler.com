@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import CatalogHub from "@/components/CatalogHub";
-import { aiServices } from "@/lib/data";
+import { aiServices, featuredAiProduct } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "AI & Automation",
@@ -16,6 +16,7 @@ export default function AiPage() {
       intro="From AI assistants and voice bots to computer vision and workflow automation — plus the full application built around them, so it ships as a real product, not a proof of concept."
       services={aiServices}
       basePath="/ai/"
+      featured={featuredAiProduct}
     />
   );
 }

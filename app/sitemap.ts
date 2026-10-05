@@ -5,7 +5,16 @@ export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://phrowler.com";
-  const staticRoutes = ["", "/erp", "/ai", "/web-mobile", "/work", "/about", "/contact"];
+  const staticRoutes = [
+    "",
+    "/erp",
+    "/ai",
+    "/ai/enterprise-knowledge-ai",
+    "/web-mobile",
+    "/work",
+    "/about",
+    "/contact",
+  ];
   const serviceRoutes = [
     ...erpServices.map((s) => `/erp/${s.slug}`),
     ...aiServices.map((s) => `/ai/${s.slug}`),

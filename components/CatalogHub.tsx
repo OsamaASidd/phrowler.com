@@ -1,6 +1,6 @@
 import Container from "./Container";
 import Button from "./Button";
-import { CatalogService } from "@/lib/data";
+import { CatalogService, FeaturedProduct } from "@/lib/data";
 import { CatalogIcon } from "./icons";
 
 export default function CatalogHub({
@@ -10,6 +10,7 @@ export default function CatalogHub({
   badge,
   services,
   basePath,
+  featured,
 }: {
   eyebrow: string;
   title: string;
@@ -17,6 +18,7 @@ export default function CatalogHub({
   badge?: string;
   services: CatalogService[];
   basePath: string;
+  featured?: FeaturedProduct;
 }) {
   return (
     <>
@@ -36,6 +38,33 @@ export default function CatalogHub({
           <p className="mt-6 max-w-2xl text-muted">{intro}</p>
         </Container>
       </section>
+
+      {featured && (
+        <section className="border-b border-border bg-muted-bg">
+          <Container className="py-16">
+            <a
+              href={featured.href}
+              className="group flex flex-col gap-6 rounded-xl border border-brand/30 bg-background p-8 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md md:flex-row md:items-center"
+            >
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-light text-brand">
+                <CatalogIcon icon={featured.icon} className="h-7 w-7" />
+              </div>
+              <div className="flex-1">
+                <span className="inline-block rounded-full bg-brand-light px-3 py-1 text-xs font-medium text-brand">
+                  Featured
+                </span>
+                <h2 className="mt-3 text-lg font-semibold text-foreground">
+                  {featured.name}
+                </h2>
+                <p className="mt-2 max-w-2xl text-sm text-muted">{featured.tagline}</p>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-brand">
+                Learn more →
+              </span>
+            </a>
+          </Container>
+        </section>
+      )}
 
       <section className="border-b border-border">
         <Container className="py-16">

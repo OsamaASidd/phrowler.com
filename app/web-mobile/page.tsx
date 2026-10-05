@@ -76,8 +76,8 @@ export default function WebMobilePage() {
           <p className="mt-6 max-w-2xl text-muted">
             Business portals, customer and vendor apps, e-commerce, and
             field-operations tools — built to read and write directly to
-            ERPNext, SAP, Sage, Dynamics 365, or Oracle, so your team never
-            re-types the same data twice.
+            ERPNext, Sage, Dynamics 365, Oracle, Zoho Books, QuickBooks, or
+            Odoo, so your team never re-types the same data twice.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-6">
             <Button href="/contact/">Start a project</Button>

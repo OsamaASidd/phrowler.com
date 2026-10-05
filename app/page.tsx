@@ -49,8 +49,9 @@ export default function Home() {
             <p className="mt-6 max-w-md text-muted">
               With 25+ years of ERP implementation experience — and 5+ years
               building e-invoicing integrations and AI automation — we set
-              up and connect ERPNext, SAP, Sage, Microsoft Dynamics 365, and
-              Oracle, then keep you compliant and automate the busywork.
+              up and connect ERPNext, Sage, Microsoft Dynamics 365, Oracle,
+              Zoho Books, QuickBooks, and Odoo, then keep you compliant and
+              automate the busywork.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-6">
               <Button href="/contact/">Start a project</Button>

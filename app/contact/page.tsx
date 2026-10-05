@@ -107,7 +107,7 @@ export default function ContactPage() {
               id="systems"
               name="systems"
               type="text"
-              placeholder="e.g. SAP S/4HANA, Sage X3, ERPNext"
+              placeholder="e.g. Odoo, Sage X3, ERPNext"
               className="mt-2 w-full rounded-lg border border-border px-4 py-2.5 text-sm outline-none focus:border-brand"
             />
           </div>

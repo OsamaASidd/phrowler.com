@@ -23,7 +23,7 @@ export default function WorkPage() {
           <p className="mt-6 max-w-2xl text-muted">
             A representative sample of compliance rollouts, ERP integrations,
             and AI systems delivered for clients across Nigeria, Pakistan,
-            the US, and Europe.
+            Saudi Arabia, India, and the UK.
           </p>
         </Container>
       </section>

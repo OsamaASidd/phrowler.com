@@ -54,7 +54,7 @@ export const pillars: Pillar[] = [
     name: "Implementation",
     pitch: "Get every system talking, and stay compliant while you do it.",
     description:
-      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business — ERPNext as our primary focus, plus SAP, Sage, Microsoft Dynamics 365, and Oracle — and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
+      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business — ERPNext as our primary focus, plus Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo — and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
   },
   {
     slug: "ai",
@@ -400,23 +400,6 @@ export const erpServices: CatalogService[] = [
     ],
   },
   {
-    slug: "sap-abap-s4hana",
-    category: "erp",
-    icon: "code",
-    name: "SAP ABAP & S/4HANA Integration",
-    tagline: "Custom development and integration work for large SAP environments.",
-    description:
-      "We build custom add-ons inside SAP and securely connect it to the other systems and tax authorities it needs to talk to.",
-    capabilities: [
-      "Custom SAP add-ons (ABAP) for things SAP doesn't do out of the box",
-      "Secure connections (RFC/STRUST) between SAP and outside systems",
-      "Integration with S/4HANA across large, multi-system landscapes",
-      "Connecting SAP to third-party APIs and compliance systems",
-      "Moving data between SAP and other ERPs",
-    ],
-    relatedCaseStudies: ["sap-abap-custom-integration", "nigeria-firs-multi-erp-rollout"],
-  },
-  {
     slug: "sage-erp-integration",
     category: "erp",
     icon: "layers",
@@ -538,6 +521,58 @@ export const erpServices: CatalogService[] = [
       "Checking your system holds up under real, everyday load",
     ],
     relatedCaseStudies: ["erpnext-performance-tuning-falcon-i"],
+  },
+  {
+    slug: "zoho-books-implementation",
+    category: "erp",
+    icon: "layers",
+    name: "Zoho Books Implementation & Integration",
+    tagline: "Setup, customization, and integration for Zoho Books.",
+    description:
+      "We set up Zoho Books and connect it to the rest of your Zoho stack — or to ERPNext, your website, and other business tools — so your books stay accurate without manual re-entry.",
+    capabilities: [
+      "Zoho Books setup and chart of accounts configuration",
+      "Integration with Zoho CRM, Inventory, and the wider Zoho suite",
+      "Connecting Zoho Books to ERPNext or other systems you run",
+      "Custom workflows and automated invoicing",
+      "Migration from spreadsheets or another accounting tool",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "quickbooks-implementation",
+    category: "erp",
+    icon: "layers",
+    name: "QuickBooks Implementation & Integration",
+    tagline: "Setup and integration for QuickBooks Online or Desktop.",
+    description:
+      "We set up QuickBooks and connect it to your other systems — inventory, CRM, or a custom app — so your accounting data stays in sync instead of living in its own silo.",
+    capabilities: [
+      "QuickBooks Online and Desktop setup and configuration",
+      "Chart of accounts and workflow setup around how you invoice and pay",
+      "Integration with your CRM, inventory, or e-commerce platform",
+      "Data migration from an existing accounting system",
+      "Custom reporting on top of your QuickBooks data",
+    ],
+    relatedCaseStudies: [],
+  },
+  {
+    slug: "odoo-implementation",
+    category: "erp",
+    icon: "layers",
+    name: "Odoo Implementation & Integration",
+    tagline: "Modular ERP implementation for growing businesses.",
+    description:
+      "We implement Odoo's modular ERP — sales, inventory, accounting, and more — configured around the modules your business actually needs, not the whole suite at once.",
+    capabilities: [
+      "Odoo implementation and module configuration",
+      "Custom development for anything Odoo doesn't do out of the box",
+      "Integration with other systems and third-party tools",
+      "Data migration from spreadsheets or another ERP",
+      "Training and ongoing support",
+    ],
+    modules: erpModules,
+    relatedCaseStudies: [],
   },
 ];
 
@@ -728,7 +763,7 @@ export const webServices: CatalogService[] = [
     name: "ERP-Connected Websites & Portals",
     tagline: "Corporate sites and portals that read and write directly to your ERP.",
     description:
-      "Corporate sites and customer/vendor portals that connect directly to ERPNext, SAP, Sage, Dynamics 365, or Oracle, so there's no manual re-entry between the two.",
+      "Corporate sites and customer/vendor portals that connect directly to ERPNext, Sage, Dynamics 365, Oracle, Zoho Books, QuickBooks, or Odoo, so there's no manual re-entry between the two.",
     capabilities: [
       "Customer and vendor self-service portals",
       "Corporate websites wired into live ERP data",

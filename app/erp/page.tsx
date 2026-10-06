@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CatalogHub from "@/components/CatalogHub";
+import EcosystemDiagram from "@/components/EcosystemDiagram";
 import { erpServices } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -17,6 +18,10 @@ export default function ErpPage() {
       intro="Our primary focus is ERPNext implementation and customization, backed by 25+ years of ERP system design experience across Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo, plus e-invoicing compliance across Nigeria, Pakistan, Saudi Arabia, India, and the UK."
       services={erpServices}
       basePath="/erp/"
+      diagram={{
+        heading: "One partner for every platform you run",
+        content: <EcosystemDiagram />,
+      }}
     />
   );
 }

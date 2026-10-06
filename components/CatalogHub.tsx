@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Container from "./Container";
 import Button from "./Button";
 import { CatalogService, FeaturedProduct } from "@/lib/data";
@@ -11,6 +12,7 @@ export default function CatalogHub({
   services,
   basePath,
   featured,
+  diagram,
 }: {
   eyebrow: string;
   title: string;
@@ -19,6 +21,7 @@ export default function CatalogHub({
   services: CatalogService[];
   basePath: string;
   featured?: FeaturedProduct;
+  diagram?: { heading: string; content: ReactNode };
 }) {
   return (
     <>
@@ -38,6 +41,17 @@ export default function CatalogHub({
           <p className="mt-6 max-w-2xl text-muted">{intro}</p>
         </Container>
       </section>
+
+      {diagram && (
+        <section className="border-b border-border">
+          <Container className="py-16">
+            <h2 className="text-center text-xl font-semibold tracking-tight text-foreground">
+              {diagram.heading}
+            </h2>
+            <div className="mt-10">{diagram.content}</div>
+          </Container>
+        </section>
+      )}
 
       {featured && (
         <section className="border-b border-border bg-muted-bg">

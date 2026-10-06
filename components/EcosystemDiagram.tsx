@@ -1,15 +1,16 @@
 type Node = {
-  lines: string[];
+  name: string;
+  logo: string;
 };
 
 const nodes: Node[] = [
-  { lines: ["ERPNext"] },
-  { lines: ["Microsoft", "Dynamics 365"] },
-  { lines: ["Oracle"] },
-  { lines: ["Sage"] },
-  { lines: ["Odoo"] },
-  { lines: ["QuickBooks"] },
-  { lines: ["Zoho Books"] },
+  { name: "ERPNext", logo: "erpnext.png" },
+  { name: "Microsoft Dynamics 365", logo: "dynamics-365.png" },
+  { name: "Oracle", logo: "oracle.png" },
+  { name: "Sage", logo: "sage.png" },
+  { name: "Odoo", logo: "odoo.png" },
+  { name: "QuickBooks", logo: "quickbooks.png" },
+  { name: "Zoho Books", logo: "zoho-books.png" },
 ];
 
 const CX = 350;
@@ -18,6 +19,8 @@ const R_NODE = 168;
 const R_NODE_CIRCLE = 58;
 const R_CENTER_CIRCLE = 92;
 const R_DOT = 14;
+const LOGO_W = 84;
+const LOGO_H = 48;
 
 function polar(angleDeg: number, radius: number) {
   const rad = (angleDeg * Math.PI) / 180;
@@ -35,7 +38,12 @@ export default function EcosystemDiagram() {
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <svg viewBox="0 0 700 464" className="h-auto w-full" role="img" aria-label="Phrowler at the center, connected to ERPNext, Microsoft Dynamics 365, Oracle, Sage, Odoo, QuickBooks, and Zoho Books">
+      <svg
+        viewBox="0 0 700 464"
+        className="h-auto w-full"
+        role="img"
+        aria-label="Phrowler at the center, connected to ERPNext, Microsoft Dynamics 365, Oracle, Sage, Odoo, QuickBooks, and Zoho Books"
+      >
         {positioned.map((n, i) => (
           <line
             key={`line-${i}`}
@@ -70,24 +78,16 @@ export default function EcosystemDiagram() {
               className="fill-background stroke-border"
               strokeWidth={1.5}
             />
-            <text
-              x={n.pos.x}
-              y={n.pos.y}
-              textAnchor="middle"
-              dominantBaseline="middle"
-              className="fill-foreground"
-              style={{ fontSize: 14.5, fontWeight: 600, fontFamily: "var(--font-geist-sans), Arial, sans-serif" }}
+            <image
+              href={`/assets/logos/${n.logo}`}
+              x={n.pos.x - LOGO_W / 2}
+              y={n.pos.y - LOGO_H / 2}
+              width={LOGO_W}
+              height={LOGO_H}
+              preserveAspectRatio="xMidYMid meet"
             >
-              {n.lines.map((line, li) => (
-                <tspan
-                  key={li}
-                  x={n.pos.x}
-                  dy={li === 0 ? (n.lines.length > 1 ? -7 : 0) : 17}
-                >
-                  {line}
-                </tspan>
-              ))}
-            </text>
+              <title>{n.name}</title>
+            </image>
           </g>
         ))}
 

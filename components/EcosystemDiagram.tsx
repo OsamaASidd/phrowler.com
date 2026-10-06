@@ -1,3 +1,5 @@
+import Logo from "./Logo";
+
 type Node = {
   name: string;
   logo: string;
@@ -37,7 +39,7 @@ export default function EcosystemDiagram() {
   }));
 
   return (
-    <div className="mx-auto w-full max-w-2xl">
+    <div className="relative mx-auto w-full max-w-2xl">
       <svg
         viewBox="0 0 700 464"
         className="h-auto w-full"
@@ -98,31 +100,13 @@ export default function EcosystemDiagram() {
           className="fill-background stroke-brand"
           strokeWidth={2}
         />
-        <rect
-          x={CX - 16}
-          y={CY - 38}
-          width={32}
-          height={32}
-          rx={2.5}
-          className="fill-[#14141c]"
-        />
-        <image
-          href="/assets/phrowler-logo.png"
-          x={CX - 16}
-          y={CY - 38}
-          width={32}
-          height={32}
-        />
-        <text
-          x={CX}
-          y={CY + 16}
-          textAnchor="middle"
-          className="fill-foreground"
-          style={{ fontSize: 17, fontWeight: 700, fontFamily: "var(--font-geist-sans), Arial, sans-serif" }}
-        >
-          Phrowler
-        </text>
       </svg>
+
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <div className="pointer-events-auto scale-125">
+          <Logo />
+        </div>
+      </div>
     </div>
   );
 }

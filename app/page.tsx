@@ -38,7 +38,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-border">
-        <Container className="grid gap-12 py-20 md:grid-cols-2 md:py-28">
+        <Container className="grid gap-12 py-10 md:grid-cols-2 md:py-28">
           <div>
             <p className="font-mono-label text-xs uppercase text-brand">
               {site.tagline}

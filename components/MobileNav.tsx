@@ -21,16 +21,12 @@ export default function MobileNav() {
   useEffect(() => {
     if (!open) return;
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
     };
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open]);
@@ -66,7 +62,7 @@ export default function MobileNav() {
         <div
           onClick={close}
           aria-hidden="true"
-          className="fixed inset-0 z-40 bg-ink/40"
+          className="fixed left-0 top-0 z-40 h-screen w-screen bg-ink/40"
         />
       )}
 

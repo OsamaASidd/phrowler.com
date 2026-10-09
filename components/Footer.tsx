@@ -8,10 +8,10 @@ export default function Footer() {
       <Container className="flex flex-col gap-8 py-12 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm">
           <Logo />
-          <p className="mt-3 text-sm text-muted">{site.description}</p>
+          <p className="mt-3 text-xs text-muted md:text-sm">{site.description}</p>
         </div>
 
-        <div className="flex flex-col gap-3 text-sm">
+        <div className="flex flex-col gap-3 text-xs md:text-sm">
           <span className="font-medium text-foreground">Site</span>
           {nav.map((item) => (
             <a
@@ -24,7 +24,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col gap-3 text-sm">
+        <div className="flex flex-col gap-3 text-xs md:text-sm">
           <span className="font-medium text-foreground">Contact</span>
           <a
             href={`mailto:${site.email}`}
@@ -42,7 +42,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col gap-3 text-sm">
+        <div className="flex flex-col gap-3 text-xs md:text-sm">
           <span className="font-medium text-foreground">Legal</span>
           <a href="/terms/" className="text-muted hover:text-brand transition-colors">
             Terms of Service

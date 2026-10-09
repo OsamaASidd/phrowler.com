@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/work",
     "/about",
     "/contact",
+    "/terms",
+    "/privacy",
   ];
   const serviceRoutes = [
     ...erpServices.map((s) => `/erp/${s.slug}`),

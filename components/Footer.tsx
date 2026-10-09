@@ -41,6 +41,16 @@ export default function Footer() {
             WhatsApp
           </a>
         </div>
+
+        <div className="flex flex-col gap-3 text-sm">
+          <span className="font-medium text-foreground">Legal</span>
+          <a href="/terms/" className="text-muted hover:text-brand transition-colors">
+            Terms of Service
+          </a>
+          <a href="/privacy/" className="text-muted hover:text-brand transition-colors">
+            Privacy Policy
+          </a>
+        </div>
       </Container>
       <Container className="border-t border-border py-6">
         <p className="text-xs text-muted">

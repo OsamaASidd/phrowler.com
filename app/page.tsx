@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Stats */}
       <section className="border-b border-border">
-        <Container className="flex flex-wrap gap-x-12 gap-y-6 py-10">
+        <Container className="grid grid-cols-2 gap-x-8 gap-y-8 py-10 sm:flex sm:flex-wrap sm:gap-x-12 sm:gap-y-6">
           {stats.map((stat) => (
             <div key={stat.label}>
               <div className="font-mono-label text-2xl font-semibold text-foreground">

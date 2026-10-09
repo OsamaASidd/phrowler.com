@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { nav, erpServices, aiServices, webMobileServices } from "@/lib/data";
+import { CatalogIcon } from "./icons";
 
 const catalogs: Record<string, typeof erpServices> = {
   "/erp/": erpServices,
@@ -67,20 +68,20 @@ export default function MobileNav() {
       )}
 
       {open && (
-        <div className="fixed inset-x-0 top-16 z-50 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-border bg-background shadow-lg">
-          <nav className="flex flex-col px-6 py-4">
+        <div className="fixed inset-x-4 top-20 z-50 max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl border border-border bg-background shadow-xl">
+          <nav className="flex flex-col divide-y divide-border p-2">
             {nav.map((item) => {
               const services = catalogs[item.href];
 
               if (services) {
                 const isExpanded = expanded === item.href;
                 return (
-                  <div key={item.href} className="border-b border-border">
-                    <div className="flex items-center justify-between">
+                  <div key={item.href}>
+                    <div className="flex items-center gap-1">
                       <a
                         href={item.href}
                         onClick={close}
-                        className="flex-1 py-3 text-sm font-medium text-foreground"
+                        className="flex-1 rounded-lg px-3 py-3 text-sm font-medium text-foreground transition-colors active:bg-muted-bg"
                       >
                         {item.label}
                       </a>
@@ -90,7 +91,7 @@ export default function MobileNav() {
                         }
                         aria-label={`Toggle ${item.label} submenu`}
                         aria-expanded={isExpanded}
-                        className="flex h-9 w-9 items-center justify-center text-muted"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted transition-colors active:bg-muted-bg"
                       >
                         <svg
                           width="12"
@@ -111,15 +112,20 @@ export default function MobileNav() {
                       </button>
                     </div>
                     {isExpanded && (
-                      <div className="pb-3 pl-3">
+                      <div className="grid gap-1 px-1 pb-2">
                         {services.map((service) => (
                           <a
                             key={service.slug}
                             href={`${item.href}${service.slug}/`}
                             onClick={close}
-                            className="block py-2 text-sm text-muted"
+                            className="flex items-center gap-3 rounded-lg px-2 py-2 transition-colors active:bg-muted-bg"
                           >
-                            {service.name}
+                            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-brand-light text-brand">
+                              <CatalogIcon icon={service.icon} className="h-4 w-4" />
+                            </span>
+                            <span className="text-sm text-foreground">
+                              {service.name}
+                            </span>
                           </a>
                         ))}
                       </div>
@@ -133,20 +139,22 @@ export default function MobileNav() {
                   key={item.href}
                   href={item.href}
                   onClick={close}
-                  className="py-3 text-sm font-medium text-foreground border-b border-border last:border-none"
+                  className="rounded-lg px-3 py-3 text-sm font-medium text-foreground transition-colors active:bg-muted-bg"
                 >
                   {item.label}
                 </a>
               );
             })}
+          </nav>
+          <div className="border-t border-border p-2">
             <a
               href="/contact/"
               onClick={close}
-              className="mt-4 inline-flex items-center justify-center rounded-sm bg-ink px-5 py-2.5 text-sm font-medium text-background"
+              className="flex items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-medium text-background transition-colors active:bg-brand"
             >
               Start a project
             </a>
-          </nav>
+          </div>
         </div>
       )}
     </div>

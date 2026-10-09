@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nav, erpServices, aiServices, webMobileServices } from "@/lib/data";
 
 const catalogs: Record<string, typeof erpServices> = {
@@ -18,13 +18,30 @@ export default function MobileNav() {
     setExpanded(null);
   };
 
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   return (
     <div className="md:hidden">
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label="Toggle menu"
         aria-expanded={open}
-        className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground"
+        className="relative z-50 flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background text-foreground"
       >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
           {open ? (
@@ -46,7 +63,15 @@ export default function MobileNav() {
       </button>
 
       {open && (
-        <div className="absolute inset-x-0 top-16 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-border bg-background shadow-sm">
+        <div
+          onClick={close}
+          aria-hidden="true"
+          className="fixed inset-0 z-40 bg-ink/40"
+        />
+      )}
+
+      {open && (
+        <div className="fixed inset-x-0 top-16 z-50 max-h-[calc(100vh-4rem)] overflow-y-auto border-b border-border bg-background shadow-lg">
           <nav className="flex flex-col px-6 py-4">
             {nav.map((item) => {
               const services = catalogs[item.href];

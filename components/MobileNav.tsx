@@ -94,8 +94,8 @@ export default function MobileNav() {
                         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-muted transition-colors active:bg-muted-bg"
                       >
                         <svg
-                          width="12"
-                          height="12"
+                          width="10"
+                          height="10"
                           viewBox="0 0 12 12"
                           fill="none"
                           aria-hidden="true"
@@ -152,7 +152,7 @@ export default function MobileNav() {
               onClick={close}
               className="flex items-center justify-center rounded-lg bg-ink px-5 py-3 text-sm font-medium text-background transition-colors active:bg-brand"
             >
-              Start a project
+              Discuss your project
             </a>
           </div>
         </div>

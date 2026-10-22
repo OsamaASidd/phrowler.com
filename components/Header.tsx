@@ -7,7 +7,7 @@ import NavDropdown from "./NavDropdown";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between">
         <Logo />
         <nav className="hidden h-full items-center gap-8 md:flex">
@@ -55,7 +55,7 @@ export default function Header() {
         </nav>
         <div className="hidden md:block">
           <Button href="/contact/" variant="primary">
-            Start a project
+            Discuss your project
           </Button>
         </div>
         <MobileNav />

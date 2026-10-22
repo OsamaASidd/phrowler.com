@@ -39,31 +39,77 @@ export const stats = [
   { value: "45K+", label: "Records processed automatically, every day" },
 ];
 
-export type Pillar = {
-  slug: string;
+export type Solution = {
+  slug: "erp" | "ai" | "web-mobile";
   href: string;
   name: string;
   pitch: string;
   description: string;
+  capabilities: string[];
 };
 
-export const pillars: Pillar[] = [
+export const solutions: Solution[] = [
   {
     slug: "erp",
     href: "/erp/",
-    name: "Implementation",
-    pitch: "Get every system talking, and stay compliant while you do it.",
+    name: "ERP implementation & compliance",
+    pitch:
+      "One system of record, and invoices that clear the tax authority on their own.",
     description:
-      "Backed by 25+ years of ERP implementation and system design experience, we set up and connect the systems that run your business, with ERPNext as our primary focus, plus Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo, and keep you compliant with e-invoicing rules in Nigeria, Pakistan, Saudi Arabia, India, and the UK, without disrupting your day-to-day operations. Official ERPNext/Frappe Partner in Oman.",
+      "We implement and connect ERPNext — our primary focus, as an Official ERPNext/Frappe Partner in Oman — plus Sage, Microsoft Dynamics 365, Oracle, Zoho Books, QuickBooks, and Odoo. Then we wire your ERP straight to the e-invoicing mandates you face in Nigeria, Pakistan, Saudi Arabia, India, and the UK, so compliance stops depending on someone re-keying invoices.",
+    capabilities: [
+      "ERPNext & Frappe implementation",
+      "E-invoicing compliance: FIRS, FBR, ZATCA, GST, UK MTD",
+      "Sage, Dynamics 365 & Oracle integration",
+      "AS2/EDI exchange with large trading partners",
+      "One reporting layer across every system you run",
+    ],
   },
   {
     slug: "ai",
     href: "/ai/",
-    name: "Integration",
-    pitch: "Production AI and automation that removes manual work, not adds to it.",
+    name: "Integration & AI automation",
+    pitch:
+      "Work that used to take a person hours, done by software that already knows the rules.",
     description:
-      "Built on 5+ years of hands-on delivery, we build AI that plugs into the tools your team already uses (Slack, Airtable, Google Drive, your ERP) instead of yet another dashboard nobody opens.",
+      "We connect your ERP to the tools your team actually lives in — Slack, Airtable, Google Drive, ad platforms — and build AI assistants, agents, and document pipelines that plug into those systems instead of adding another dashboard nobody opens.",
+    capabilities: [
+      "Workflow automation across your existing stack",
+      "AI assistants grounded in your own documents",
+      "AI agents that take action, with guardrails",
+      "Document extraction & computer vision",
+    ],
   },
+  {
+    slug: "web-mobile",
+    href: "/web-mobile/",
+    name: "Custom software",
+    pitch:
+      "Portals, apps, and dashboards built around how your business actually works.",
+    description:
+      "When off-the-shelf software doesn't fit the process, we build the web applications, ERP-connected portals, and mobile apps that do — designed for the people using them every day, and integrated with your ERP from day one.",
+    capabilities: [
+      "Custom web applications & internal tools",
+      "ERP-connected customer and vendor portals",
+      "iOS & Android apps for field teams",
+      "Dashboards on live operational data",
+    ],
+  },
+];
+
+export type Platform = {
+  name: string;
+  logo: string;
+};
+
+export const platforms: Platform[] = [
+  { name: "ERPNext", logo: "erpnext.png" },
+  { name: "Microsoft Dynamics 365", logo: "dynamics-365.png" },
+  { name: "Oracle", logo: "oracle.png" },
+  { name: "Sage", logo: "sage.png" },
+  { name: "Odoo", logo: "odoo.png" },
+  { name: "QuickBooks", logo: "quickbooks.png" },
+  { name: "Zoho Books", logo: "zoho-books.png" },
 ];
 
 export type CaseStudy = {

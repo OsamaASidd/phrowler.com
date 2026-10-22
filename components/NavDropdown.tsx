@@ -1,3 +1,6 @@
+"use client";
+
+import { KeyboardEvent } from "react";
 import { CatalogService } from "@/lib/data";
 import { CatalogIcon } from "./icons";
 
@@ -10,8 +13,17 @@ export default function NavDropdown({
   href: string;
   services: CatalogService[];
 }) {
+  const closeOnEscape = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "Escape") {
+      (document.activeElement as HTMLElement | null)?.blur();
+    }
+  };
+
   return (
-    <div className="group relative flex h-full items-center">
+    <div
+      className="group relative flex h-full items-center"
+      onKeyDown={closeOnEscape}
+    >
       <a
         href={href}
         className="text-sm font-medium text-muted transition-colors hover:text-foreground"
@@ -19,7 +31,7 @@ export default function NavDropdown({
         {label}
       </a>
 
-      <div className="invisible absolute left-1/2 top-full z-50 w-[600px] -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div className="invisible absolute left-1/2 top-full z-50 w-[600px] max-w-[calc(100vw-3rem)] -translate-x-1/2 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
         <div className="rounded-xl border border-border bg-background shadow-lg">
           <div className="grid grid-cols-2 gap-2 p-4">
             {services.map((service) => (

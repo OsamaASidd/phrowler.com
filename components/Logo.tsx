@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useId } from "react";
 
 export default function Logo({ className = "" }: { className?: string }) {
@@ -12,10 +13,12 @@ export default function Logo({ className = "" }: { className?: string }) {
       className={`inline-flex items-center gap-2.5 text-lg font-semibold tracking-tight text-foreground ${className}`}
     >
       <span className="relative block h-9 w-9 shrink-0 overflow-hidden rounded-[7%] bg-[#14141c]">
-        <img
+        <Image
           src="/assets/phrowler-logo.png"
           alt=""
           aria-hidden="true"
+          width={36}
+          height={36}
           className="absolute inset-0 h-full w-full"
         />
         <svg

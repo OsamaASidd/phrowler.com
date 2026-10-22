@@ -1,202 +1,28 @@
-import Container from "@/components/Container";
-import Button from "@/components/Button";
-import { pillars, erpServices, aiServices, caseStudies, stats, site } from "@/lib/data";
-import { CheckIcon } from "@/components/icons";
+import type { Metadata } from "next";
+import Hero from "@/components/home/Hero";
+import TrustBand from "@/components/home/TrustBand";
+import Problems from "@/components/home/Problems";
+import Solutions from "@/components/home/Solutions";
+import FeaturedWork from "@/components/home/FeaturedWork";
+import Process from "@/components/home/Process";
+import ClosingCta from "@/components/home/ClosingCta";
 
-const previewByPillar: Record<string, typeof erpServices> = {
-  erp: erpServices.slice(0, 4),
-  ai: aiServices.slice(0, 4),
+export const metadata: Metadata = {
+  title: "ERP, e-invoicing compliance & AI automation",
+  description:
+    "Phrowler connects the systems that run your business: ERPNext, Sage, Dynamics 365, and Oracle implementation, e-invoicing compliance for FIRS, FBR, ZATCA and more, and AI automation that removes manual work. 25+ years of ERP delivery.",
 };
-
-const countByPillar: Record<string, number> = {
-  erp: erpServices.length,
-  ai: aiServices.length,
-};
-
-const businessProblems = [
-  {
-    title: "Fragmented systems",
-    problem: "Different departments and applications don't talk to each other.",
-    solution: "We connect them.",
-  },
-  {
-    title: "E-invoicing complexity",
-    problem: "ERP invoices must comply with changing tax-authority requirements.",
-    solution: "We automate the compliance.",
-  },
-  {
-    title: "Manual processes",
-    problem: "Your team spends hours moving data between systems by hand.",
-    solution: "We automate the workflow.",
-  },
-];
 
 export default function Home() {
-  const highlights = caseStudies.slice(0, 4);
-
   return (
     <>
-      {/* Hero */}
-      <section className="border-b border-border">
-        <Container className="grid gap-12 py-10 md:grid-cols-2 md:py-28">
-          <div>
-            <p className="font-mono-label text-xs uppercase text-brand">
-              {site.tagline}
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground md:text-[2.75rem] md:leading-[1.1]">
-              Keep your ERP connected, compliant, and running smoothly.
-            </h1>
-            <p className="mt-6 max-w-md text-muted">
-              With 25+ years of ERP implementation experience, and 5+ years
-              building e-invoicing integrations and AI automation, we set
-              up and connect ERPNext, Sage, Microsoft Dynamics 365, Oracle,
-              Zoho Books, QuickBooks, and Odoo, then keep you compliant and
-              automate the busywork.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-6">
-              <Button href="/contact/">Start a project</Button>
-              <Button href="/work/" variant="ghost">
-                See the work →
-              </Button>
-            </div>
-          </div>
-
-          <div className="rounded-xl border border-border bg-background p-6 shadow-sm">
-            <div className="divide-y divide-border">
-              {businessProblems.map((p) => (
-                <div key={p.title} className="py-4 first:pt-0 last:pb-0">
-                  <p className="font-mono-label text-xs uppercase text-muted">
-                    {p.title}
-                  </p>
-                  <p className="mt-2 text-sm text-muted">{p.problem}</p>
-                  <p className="mt-2 flex items-center gap-2 text-sm font-medium text-brand">
-                    <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-brand-light text-brand">
-                      <CheckIcon className="h-3 w-3" />
-                    </span>
-                    {p.solution}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Stats */}
-      <section className="border-b border-border">
-        <Container className="grid grid-cols-2 gap-x-8 gap-y-8 py-10 sm:flex sm:flex-wrap sm:gap-x-12 sm:gap-y-6">
-          {stats.map((stat) => (
-            <div key={stat.label}>
-              <div className="font-mono-label text-2xl font-semibold text-foreground">
-                {stat.value}
-              </div>
-              <div className="mt-1 max-w-[14rem] text-sm text-muted">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </Container>
-      </section>
-
-      {/* Pillars */}
-      <section className="border-b border-border">
-        <Container className="py-20">
-          <div className="max-w-2xl">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-              What we do
-            </h2>
-            <p className="mt-3 text-muted">
-              Two disciplines, one team, because the hardest problems live
-              where your ERP meets your automation.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.slug}
-                className="rounded-xl border border-border bg-background p-8 shadow-sm"
-              >
-                <h3 className="text-lg font-semibold text-foreground">
-                  {pillar.name}
-                </h3>
-                <p className="mt-2 text-sm font-medium text-brand">
-                  {pillar.pitch}
-                </p>
-                <p className="mt-4 text-sm text-muted">{pillar.description}</p>
-                <ul className="mt-6 space-y-2 border-t border-border pt-6">
-                  {previewByPillar[pillar.slug].map((service) => (
-                    <li
-                      key={service.slug}
-                      className="text-sm text-foreground before:mr-2 before:text-brand before:content-['-']"
-                    >
-                      {service.name}
-                    </li>
-                  ))}
-                </ul>
-                <Button href={pillar.href} variant="ghost" className="mt-6">
-                  All {countByPillar[pillar.slug]} services →
-                </Button>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Featured work */}
-      <section className="border-b border-border">
-        <Container className="py-20">
-          <div className="flex items-end justify-between gap-4">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Recent engagements
-              </h2>
-              <p className="mt-3 text-muted">
-                A sample of the compliance rollouts, integrations, and AI
-                systems we&apos;ve delivered.
-              </p>
-            </div>
-            <Button href="/work/" variant="ghost" className="hidden shrink-0 md:inline-flex">
-              View all →
-            </Button>
-          </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {highlights.map((project) => (
-              <div
-                key={project.slug}
-                className="rounded-xl border border-border bg-background p-6 shadow-sm"
-              >
-                <span
-                  className={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-medium ${
-                    project.pillar === "erp"
-                      ? "bg-brand-light text-brand"
-                      : "bg-muted-bg text-foreground"
-                  }`}
-                >
-                  {project.pillar === "erp" ? "ERP & Compliance" : "AI & Automation"}
-                </span>
-                <h3 className="mt-4 font-semibold text-foreground">{project.title}</h3>
-                <p className="mt-1 text-sm text-muted">{project.client}</p>
-              </div>
-            ))}
-          </div>
-          <Button href="/work/" variant="ghost" className="mt-8 md:hidden">
-            View all →
-          </Button>
-        </Container>
-      </section>
-
-      {/* CTA */}
-      <section>
-        <Container className="flex flex-col items-start gap-6 py-20 md:flex-row md:items-center md:justify-between">
-          <h2 className="max-w-lg text-2xl font-semibold tracking-tight text-foreground">
-            Have a compliance deadline, or a system that doesn&apos;t talk to
-            itself?
-          </h2>
-          <Button href="/contact/" className="shrink-0">
-            Get in touch
-          </Button>
-        </Container>
-      </section>
+      <Hero />
+      <TrustBand />
+      <Problems />
+      <Solutions />
+      <FeaturedWork />
+      <Process />
+      <ClosingCta />
     </>
   );
 }

@@ -1,38 +1,231 @@
 @import "tailwindcss";
 
+/*
+  Phrowler art direction: warm paper + charcoal, with one confident orange accent
+  carried over from the brand mark. Editorial scale, strong rules, generous space.
+*/
 :root {
-  --background: #faf8f4;
-  --foreground: #16140f;
-  --muted: #6b6355;
-  --muted-bg: #f1ede4;
-  --border: #e4ddcf;
+  --background: #f4f1ea;
+  --background-2: #ebe6da;
+  --foreground: #141317;
+  --muted: #5b564c;
+  --muted-bg: #ebe6da;
+  --border: #ded8ca;
+  --border-strong: #c5bcaa;
+  --surface: #ffffff;
+  --ink: #0c0c0f;
+  --ink-2: #16161b;
+  --paper: #f4f1ea;
   --brand: #a8410f;
-  --brand-light: #f5e9de;
+  --brand-bright: #ff6a2c;
   --brand-dark: #7a2f0a;
-  --ink: #16140f;
+  --brand-light: #f5e9de;
+  --focus: #e2571c;
+  color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2: var(--background-2);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-muted-bg: var(--muted-bg);
   --color-border: var(--border);
-  --color-brand: var(--brand);
-  --color-brand-light: var(--brand-light);
-  --color-brand-dark: var(--brand-dark);
+  --color-border-strong: var(--border-strong);
+  --color-surface: var(--surface);
   --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-paper: var(--paper);
+  --color-brand: var(--brand);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  --color-focus: var(--focus);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Editorial display face for headlines and figures */
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  letter-spacing: -0.02em;
 }
 
 .font-mono-label {
   font-family: var(--font-mono), ui-monospace, monospace;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
+}
+
+/* Large outline figures used as editorial accents */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.25px var(--border-strong);
+}
+
+.text-outline-light {
+  color: transparent;
+  -webkit-text-stroke: 1.25px color-mix(in srgb, var(--paper) 28%, transparent);
+}
+
+/* Mid-orange focus ring keeps 3:1+ contrast on both light and dark sections */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Faint engineering grid used behind technical diagrams */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--border) 80%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 80%, transparent) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--paper) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--paper) 7%, transparent) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Scroll reveal: content stays visible without JS; JS only hides
+   below-the-fold elements before animating them in. */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-shown {
+  animation: reveal-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Data-flow dots travelling along dashed connectors in the hero diagram */
+.flow-connector {
+  position: relative;
+  width: 1.5px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--border-strong) 55%,
+    transparent 0
+  );
+  background-size: 1.5px 9px;
+}
+
+.flow-connector::before,
+.flow-connector::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: var(--brand-bright);
+  transform: translateX(-50%);
+  animation: flow-down 2.8s linear infinite;
+}
+
+.flow-connector::after {
+  animation-delay: 1.4s;
+}
+
+@keyframes flow-down {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.flow-connector-h {
+  position: relative;
+  height: 1.5px;
+  width: 2.25rem;
+  background-image: linear-gradient(
+    to right,
+    var(--border-strong) 55%,
+    transparent 0
+  );
+  background-size: 9px 1.5px;
+}
+
+.flow-connector-h::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: var(--brand-bright);
+  transform: translateY(-50%);
+  animation: flow-right 2.8s linear infinite;
+}
+
+@keyframes flow-right {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden,
+  .reveal-shown {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .flow-connector::before,
+  .flow-connector::after,
+  .flow-connector-h::after {
+    animation: none !important;
+    opacity: 0.6;
+    top: 50%;
+  }
+
+  .flow-connector-h::after {
+    left: 50%;
+  }
 }

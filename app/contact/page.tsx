@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Container from "@/components/Container";
+import ContactForm from "@/components/contact/ContactForm";
 import { site } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Contact",
   description: "Tell Phrowler about your ERP integration, compliance, or AI automation project.",
 };
-
-const formEndpoint =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ?? "https://formspree.io/f/REPLACE_ME";
 
 export default function ContactPage() {
   return (
@@ -55,85 +53,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form
-          action={formEndpoint}
-          method="POST"
-          className="md:col-span-3 space-y-6 border border-border p-8"
-        >
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div>
-              <label htmlFor="name" className="text-sm font-medium text-foreground">
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                className="mt-2 w-full rounded-sm border border-border px-4 py-2.5 text-sm outline-none focus:border-ink"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="text-sm font-medium text-foreground">
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-2 w-full rounded-sm border border-border px-4 py-2.5 text-sm outline-none focus:border-ink"
-              />
-            </div>
-          </div>
-
-          <div>
-            <label htmlFor="company" className="text-sm font-medium text-foreground">
-              Company
-            </label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              className="mt-2 w-full rounded-lg border border-border px-4 py-2.5 text-sm outline-none focus:border-brand"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="systems" className="text-sm font-medium text-foreground">
-              What systems are involved?
-            </label>
-            <input
-              id="systems"
-              name="systems"
-              type="text"
-              placeholder="e.g. Odoo, Sage X3, ERPNext"
-              className="mt-2 w-full rounded-lg border border-border px-4 py-2.5 text-sm outline-none focus:border-brand"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="message" className="text-sm font-medium text-foreground">
-              Project details
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              required
-              className="mt-2 w-full rounded-lg border border-border px-4 py-2.5 text-sm outline-none focus:border-brand"
-            />
-          </div>
-
-          <input type="hidden" name="_subject" value="New inquiry from phrowler.com" />
-
-          <button
-            type="submit"
-            className="inline-flex items-center justify-center rounded-sm bg-ink px-6 py-3 text-sm font-medium text-background hover:bg-brand transition-colors"
-          >
-            Send message
-          </button>
-        </form>
+        <ContactForm />
       </Container>
     </section>
   );
